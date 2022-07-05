@@ -1,10 +1,11 @@
 import { useState } from "react";
 import Button from "./UI/Button";
 
-function EmailForm() {
-    const [enteredname, setEnteredName] = useState();
-    const [enteredEmail, setEnteredEmail] = useState();
-    const [enteredAgency, setEnteredAgency] = useState();
+function EmailForm(props) {
+    const [enteredname, setEnteredName] = useState("");
+    const [enteredEmail, setEnteredEmail] = useState("");
+    const [enteredAgency, setEnteredAgency] = useState("");
+
 
     const emailChangeHandler = (e) => {
         setEnteredEmail(e.target.value);
@@ -18,12 +19,25 @@ function EmailForm() {
         setEnteredAgency(e.target.value);
     }
 
+    const submitHandler = (e) => {
+        e.preventDefault();
+        const voter = {
+            name: enteredname,
+            email: enteredEmail,
+            agency: enteredAgency
+        }
+        props.getEmail(voter);
+        setEnteredName("")
+        setEnteredEmail("")
+        setEnteredAgency("")
+    }
+
     return (
-        <form className="">
+        <form onSubmit={submitHandler}>
             <div className="grid grid-cols-2 gap-2 p-2">
                 <div className="input-holder col-span-2">
                     <input
-                        className="min-w-full"
+                        className="min-w-full text-black"
                         type="text"
                         onChange={nameChangeHandler}
                         value={enteredname}
@@ -32,7 +46,7 @@ function EmailForm() {
                 </div>
                 <div className="input-holder col-span-2">
                     <input type="text"
-                        className="min-w-full"
+                        className="min-w-full text-black"
                         onChange={emailChangeHandler}
                         value={enteredEmail}
                         placeholder={"Email*"}
@@ -40,16 +54,14 @@ function EmailForm() {
                 </div>
                 <div className="input-holder ">
                     <input type="text"
+                        className="text-black"
                         onChange={agencyChangeHandler}
                         value={enteredAgency}
                         placeholder={"Agency"}
                     />
                 </div>
                 <div>
-                    <input type="submit"
-                        className="border mid w-full"
-                        value="JOIN US"
-                    />
+                    <button type='submit'>JOIN US</button>
                 </div>
             </div>
         </form>
