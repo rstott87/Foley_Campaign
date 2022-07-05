@@ -1,11 +1,14 @@
+import EmailForm from "./EmailForm"
+
 function MainSection() {
 
     return (
-        <div className="flex justify-center bg-blue-500">
-            <div className="flex-col justify-center my-36 text-bold text-neutral-50">
-                <p className="text-2xl">DAVE FOLEY</p>
-                <p className="">Join Our Campaign</p> 
-                <p className="text-sm">For info and upates</p>
+        <div className="main-section flex justify-center bg-blue-500">
+            <div className="my-36 text-bold text-neutral-50">
+                <p className="text-center text-2xl">DAVE FOLEY</p>
+                <p className="text-center">Join Our Campaign</p> 
+                <p className="text-center text-sm">For info and upates</p>
+                  <EmailForm/>
             </div>
         </div>
     )
