@@ -8,6 +8,7 @@ module.exports = {
       backgroundImage: theme => ({
         'hero-pattern': "url('src/images/Dave_headshot.jpeg')",
         'footer-texture': "url('/img/footer-texture.png')",
+        'logo': "url('src/images/logo.png')"
       })
     },
   },
