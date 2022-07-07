@@ -24,7 +24,7 @@ function MainSection() {
     }
 
     return (
-        <div className="main-section flex justify-center bg-gradient-to-r from-blue-500 to-cyan-400">
+        <div className="main-section flex justify-center bg-gradient-to-r from-blue-600 to-blue-300">
             <div className="my-36 text-bold text-neutral-50">
                 <div className="text-3xl m-20">DAVE FOLEY</div>
                 <p className="text-center font-bold text-2xl">Join Our Campaign</p>
