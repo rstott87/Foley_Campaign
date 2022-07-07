@@ -36,10 +36,10 @@ function EmailForm(props) {
         <form onSubmit={submitHandler}>
             <p className="text-center font-bold text-2xl">Join Our Campaign</p>
             <p className="text-center text-sm">For info and upates</p>
-            <div className="grid grid-cols-2 gap-3 p-2">
+            <div className="grid grid-cols-2 gap-2 p-2">
                 <div className="input-holder col-span-2">
                     <input
-                        className="pl-3 min-w-full h-11 text-black"
+                        className="rounded-lg box-border border border-slate-800 pl-3 min-w-full h-11 text-black"
                         type="text"
                         onChange={nameChangeHandler}
                         value={enteredname}
@@ -48,7 +48,7 @@ function EmailForm(props) {
                 </div>
                 <div className="input-holder col-span-2">
                     <input
-                        className="pl-3 min-w-full h-11 text-black"
+                        className="rounded-lg box-border border border-slate-800 pl-3 min-w-full h-11 text-black"
                         type="text"
                         onChange={emailChangeHandler}
                         value={enteredEmail}
@@ -57,14 +57,14 @@ function EmailForm(props) {
                 </div>
                 <div className="input-holder ">
                     <input
-                        className="box-border min-w-full pl-2 text-black h-11"
+                        className="rounded-lg box-border border border-slate-800 pl-2 max-w-full text-black h-11"
                         type="text"
                         onChange={agencyChangeHandler}
                         value={enteredAgency}
                         placeholder={"Agency"}
                     />
                 </div>
-                <div className="flex ml-1 bg-red-400 justify-center">
+                <div className="rounded-lg box-border border border-slate-800 flex bg-blue-500 justify-center text-white font-semibold">
                     <button type='submit'>JOIN US</button>
                 </div>
             </div>

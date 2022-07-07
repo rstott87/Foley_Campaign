@@ -25,14 +25,11 @@ function MainSection() {
     }
 
     return (
-        <div className="p-5 main-section  bg-gradient-to-r from-blue-700 to-blue-400 text-neutral-200">
+        <div className="p-5 main-section bg-gradient-to-r from-blue-500 to-white text-neutral-900">
             {/* <div className="bg-contain bg-center bg-no-repeat bg-hero-pattern text-bold text-black-100"></div> */}
             <Logo/>
             <div className="grid gap-14">
-                <div className="h-28 opacity-70 bg-logo bg-contain bg-no-repeat"> 
-                    {/* <p className="text-3xl" >Dave Foley</p>
-                    <p className="text-lg"> For Local President</p> */}
-                </div>
+
                 <EmailForm getEmail={userEmail} />
             </div>
         </div>
