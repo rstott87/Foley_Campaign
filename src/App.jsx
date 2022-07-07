@@ -3,6 +3,7 @@ import logo from './logo.svg'
 import './App.css'
 import NavBar from './components/NavBar'
 import MainSection from './components/MainSetion'
+import MiddleSection from './components/MiddleSection'
 import Button from './components/UI/Button'
 import EmailForm from './components/EmailForm'
 
@@ -11,8 +12,10 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar/>
-      <MainSection/>
+      <NavBar />
+      <MainSection />
+      <MiddleSection/>
+      <BottomSection />
     </div>
   )
 }
