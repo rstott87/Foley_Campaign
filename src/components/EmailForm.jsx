@@ -34,10 +34,10 @@ function EmailForm(props) {
 
     return (
         <form onSubmit={submitHandler}>
-            <div className="grid grid-cols-2 gap-2 p-2">
+            <div className="m-2 grid grid-cols-2 gap-3 p-2">
                 <div className="input-holder col-span-2">
                     <input
-                        className="min-w-full text-black"
+                        className="pl-3 min-w-full h-11 text-black"
                         type="text"
                         onChange={nameChangeHandler}
                         value={enteredname}
@@ -45,22 +45,24 @@ function EmailForm(props) {
                     />
                 </div>
                 <div className="input-holder col-span-2">
-                    <input type="text"
-                        className="min-w-full text-black"
+                    <input 
+                        className="pl-3 min-w-full h-11 text-black"
+                        type="text"
                         onChange={emailChangeHandler}
                         value={enteredEmail}
                         placeholder={"Email*"}
                     />
                 </div>
                 <div className="input-holder ">
-                    <input type="text"
-                        className="text-black"
+                    <input  
+                        className="box-border pl-2 text-black h-11"    
+                        type="text"
                         onChange={agencyChangeHandler}
                         value={enteredAgency}
                         placeholder={"Agency"}
                     />
                 </div>
-                <div>
+                <div className="flex ml-2 bg-red-400 justify-center">
                     <button type='submit'>JOIN US</button>
                 </div>
             </div>
