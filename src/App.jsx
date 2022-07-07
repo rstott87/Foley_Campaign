@@ -4,6 +4,7 @@ import './App.css'
 import NavBar from './components/NavBar'
 import MainSection from './components/MainSetion'
 import MiddleSection from './components/MiddleSection'
+import BottomSection from './components/BottomSection'
 import Button from './components/UI/Button'
 import EmailForm from './components/EmailForm'
 
