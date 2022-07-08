@@ -25,7 +25,7 @@ function MainSection(props) {
     }
 
     return (
-        <div className="p-5 main-section bg-gradient-to-br from-slate-800 to-blue-500 text-neutral-50 ">
+        <div className="p-5 relative main-section bg-gradient-to-br from-slate-800 to-blue-400 text-neutral-50 ">
             {/* <div className="bg-contain bg-center bg-no-repeat bg-hero-pattern text-bold text-black-100"></div> */}
             <Logo language={props.language}/>
             <div className="grid gap-14">
