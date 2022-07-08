@@ -12,9 +12,9 @@ const Logo = function (props) {
 
 
 return (
-    <div className="mx-auto mb-32 mt-8 w-7/12 font-bold p-2 text-neutral-100">
+    <div className="mx-auto mb-10 mt-8 w-7/12 font-bold p-2 text-neutral-100">
         <div className="flex justify-evenly">
-            <p className="w-full bg-white border border-blue-600 text-xl font-extrabold fon text-center tracking-wide text-slate-600 -rotate-6">ELECT</p>
+            <p className="w-full bg-white border border-blue-900 text-xl font-extrabold fon text-center tracking-wide text-slate-600 -rotate-12 shadow-md shadow-slate-800">ELECT</p>
             <p className=" w-full text-center font-black tracking-wide text-2xl rotate">{name} </p>
 
 
