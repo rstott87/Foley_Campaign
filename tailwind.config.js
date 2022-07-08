@@ -4,12 +4,7 @@ module.exports = {
     extend: {
       boxShadow: {
         'blur': 'inset 20px 20px white',
-      },
-      backgroundImage: theme => ({
-        'hero-pattern': "url('src/images/Dave_headshot.jpeg')",
-        'footer-texture': "url('/img/footer-texture.png')",
-        'logo': "url('src/images/logo.png')"
-      })
+      }
     },
   },
   plugins: [],

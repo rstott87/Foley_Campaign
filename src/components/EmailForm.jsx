@@ -39,7 +39,7 @@ function EmailForm(props) {
             <div className="grid grid-cols-2 gap-2 p-2">
                 <div className="input-holder col-span-2">
                     <input
-                        className="rounded-lg box-border border border-slate-800 pl-3 min-w-full h-11 text-black"
+                        className="rounded-md box-border border border-slate-400 pl-3 min-w-full h-11 text-black"
                         type="text"
                         onChange={nameChangeHandler}
                         value={enteredname}
@@ -48,7 +48,7 @@ function EmailForm(props) {
                 </div>
                 <div className="input-holder col-span-2">
                     <input
-                        className="rounded-lg box-border border border-slate-800 pl-3 min-w-full h-11 text-black"
+                        className="rounded-md box-border border border-slate-400 pl-3 min-w-full h-11 text-black"
                         type="text"
                         onChange={emailChangeHandler}
                         value={enteredEmail}
@@ -57,14 +57,14 @@ function EmailForm(props) {
                 </div>
                 <div className="input-holder ">
                     <input
-                        className="rounded-lg box-border border border-slate-800 pl-2 max-w-full text-black h-11"
+                        className="rounded-md box-border border border-slate-400 pl-2 max-w-full text-black h-11"
                         type="text"
                         onChange={agencyChangeHandler}
                         value={enteredAgency}
                         placeholder={"Agency"}
                     />
                 </div>
-                <div className="rounded-lg box-border border border-slate-800 flex bg-blue-500 justify-center text-white font-semibold">
+                <div className="rounded-md box-border border border-slate-400 flex bg-blue-600 justify-center text-white font-semibold">
                     <button type='submit'>JOIN US</button>
                 </div>
             </div>

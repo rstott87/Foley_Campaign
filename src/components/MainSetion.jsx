@@ -15,7 +15,7 @@ const placeholderUser = [
     },
 ]
 
-function MainSection() {
+function MainSection(props) {
     const [submittedUser, setSubmittedUser] = useState(placeholderUser)
 
     const userEmail = (user) => {
@@ -25,9 +25,9 @@ function MainSection() {
     }
 
     return (
-        <div className="p-5 main-section bg-gradient-to-r from-blue-500 to-white text-neutral-900">
+        <div className="p-5 main-section bg-gradient-to-br from-slate-800 to-blue-500 text-neutral-50 ">
             {/* <div className="bg-contain bg-center bg-no-repeat bg-hero-pattern text-bold text-black-100"></div> */}
-            <Logo/>
+            <Logo language={props.language}/>
             <div className="grid gap-14">
 
                 <EmailForm getEmail={userEmail} />
