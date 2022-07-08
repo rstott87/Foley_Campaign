@@ -57,17 +57,18 @@ function EmailForm(props) {
                 </div>
                 <div className="input-holder ">
                     <input
-                        className="rounded-md box-border border border-slate-400 pl-2 max-w-full text-black h-11"
+                        className="rounded-md border border-slate-400 pl-2 w-full text-black h-11"
                         type="text"
                         onChange={agencyChangeHandler}
                         value={enteredAgency}
                         placeholder={"Agency"}
                     />
                 </div>
-                <div className="rounded-md box-border border border-slate-400 flex bg-blue-600 justify-center text-white font-semibold">
+                <div className="rounded-md box-border border border-slate-500 flex bg-blue-600 justify-center text-white font-semibold">
                     <button type='submit'>JOIN US</button>
                 </div>
             </div>
+
         </form>
     )
 }
