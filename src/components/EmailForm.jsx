@@ -32,9 +32,19 @@ function EmailForm(props) {
         setEnteredAgency("")
     }
 
+    let joinCampaign = ""
+
+    if (props.language==="English"){
+        joinCampaign = "Join Our Campaign"
+    }
+    else {
+        joinCampaign = "Únete a nuestra campaña"
+    }
+
+
     return (
         <form onSubmit={submitHandler}>
-            <p className="text-center font-bold text-2xl">Join Our Campaign</p>
+            <p className="text-center font-bold text-2xl">{joinCampaign}</p>
             <p className="text-center text-sm">For info and upates</p>
             <div className="grid grid-cols-2 gap-2 p-2">
                 <div className="input-holder col-span-2">

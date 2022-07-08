@@ -17,7 +17,7 @@ const placeholderUser = [
 
 function MainSection(props) {
     const [submittedUser, setSubmittedUser] = useState(placeholderUser)
-
+    //adds user info from form
     const userEmail = (user) => {
         setSubmittedUser(prevUser => {
             return [user, ...prevUser]
@@ -30,7 +30,7 @@ function MainSection(props) {
             <Logo language={props.language}/>
             <div className="grid gap-14">
 
-                <EmailForm getEmail={userEmail} />
+                <EmailForm getEmail={userEmail} language={props.language}/>
             </div>
         </div>
     )
