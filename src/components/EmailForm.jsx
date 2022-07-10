@@ -5,7 +5,7 @@ import { send } from 'emailjs-com';
 function EmailForm(props) {
     const [enteredname, setEnteredName] = useState("");
     const [enteredEmail, setEnteredEmail] = useState("");
-    const [enteredAgency, setEnteredAgency] = useState("");
+    const [enteredChapter, setEnteredChapter] = useState("");
     const [enteredPhone, setEnteredPhone] = useState("");
 
     const [toSend, setToSend] = useState({
@@ -26,8 +26,8 @@ function EmailForm(props) {
         setToSend({ ...toSend, [e.target.name]: e.target.value });
     }
 
-    const agencyChangeHandler = (e) => {
-        setEnteredAgency(e.target.value);
+    const chapterChangeHandler = (e) => {
+        setEnteredChapter(e.target.value);
         setToSend({ ...toSend, [e.target.name]: e.target.value });
     }
 
@@ -42,7 +42,7 @@ function EmailForm(props) {
         const voter = {
             name: enteredname,
             email: enteredEmail,
-            agency: enteredAgency
+            agency: enteredChapter
         }
         send(
             'service_mr00i87',
@@ -60,7 +60,7 @@ function EmailForm(props) {
         props.getEmail(voter);
         setEnteredName("")
         setEnteredEmail("")
-        setEnteredAgency("")
+        setEnteredChapter("")
         setEnteredPhone("")
     }
 
@@ -115,8 +115,8 @@ function EmailForm(props) {
                         className="rounded-md border border-slate-400 pl-2 w-full text-black h-11"
                         name="chapter"
                         type="text"
-                        onChange={agencyChangeHandler}
-                        value={enteredAgency}
+                        onChange={chapterChangeHandler}
+                        value={enteredChapter}
                         placeholder={"Chapter"}
                     />
                 </div>
