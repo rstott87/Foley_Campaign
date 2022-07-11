@@ -3,12 +3,12 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        'blur': 'inset 20px 20px white',
+        blur: "inset 20px 20px white"
       },
       animation: {
-        'spin-slow': 'spin 8s linear infinite reverse',
-      }
-    },
+        "spin-slow": "spin 8s linear infinite reverse"
+      },
+    }
   },
-  plugins: [],
-}
+  plugins: []
+};

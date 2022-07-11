@@ -25,7 +25,7 @@ function MainSection(props) {
   };
 
   return (
-    <div className="main-section relative bg-gradient-to-br from-slate-800 to-blue-400 p-5 text-neutral-50 ">
+    <div className="z-0 bg-gradient-to-br from-slate-800 to-blue-400 p-5 text-neutral-50 ">
       {/* <div className="bg-contain bg-center bg-no-repeat bg-hero-pattern text-bold text-black-100"></div> */}
       <Logo language={props.language} />
       <div className="grid gap-14">
@@ -36,4 +36,4 @@ function MainSection(props) {
 }
 
 export default MainSection;
-Í;
+
