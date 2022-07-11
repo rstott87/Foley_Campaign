@@ -8,7 +8,7 @@ function EmailForm(props) {
     const [enteredEmail, setEnteredEmail] = useState("");
     const [enteredChapter, setEnteredChapter] = useState("");
     const [enteredPhone, setEnteredPhone] = useState("");
-    const [isDisabled, setIsDisabled] = useState(true)
+    // const [isDisabled, setIsDisabled] = useState(true)
 
     const [toSend, setToSend] = useState({
         from_name: 'Bob',
@@ -19,6 +19,7 @@ function EmailForm(props) {
 
 
     const emailChangeHandler = (e) => {
+        setEnteredEmail(e.target.value)
         setToSend({ ...toSend, [e.target.name]: e.target.value });
     }
 
@@ -77,7 +78,7 @@ function EmailForm(props) {
 
     return (
         <form onSubmit={submitHandler}>
-            <p className="text-center font-bold text-2xl">{joinCampaign}</p>
+            <p className="transition-all  ease-in-out delay-1000  text-center font-bold text-2xl">{joinCampaign}</p>
             <p className="text-center text-sm">For info and upates</p>
             <div className="grid grid-cols-2 gap-3 p-2">
                 <div className="input-holder col-span-2">
@@ -124,7 +125,7 @@ function EmailForm(props) {
                     />
                 </div>
 
-                <JoinButton isDisabled={isDisabled} />
+                <JoinButton />
 
             </div>
 

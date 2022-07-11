@@ -14,10 +14,8 @@ const Logo = function (props) {
     return (   
             <div className="mx-auto mb-10 mt-8 w-48 font-bold p-2 text-neutral-100">
                 <div className="flex justify-evenly">
-                    <p className="w-full bg-white border border-blue-900 text-xl font-extrabold fon text-center tracking-wide text-slate-600 -rotate-6 shadow-md shadow-slate-800">ELECT</p>
+                    <p className="w-full bg-white border border-blue-900 text-xl font-extrabold fon text-center tracking-wide -rotate-12 text-slate-600  shadow-md shadow-slate-800">ELECT</p>
                     <p className=" w-full text-center font-black tracking-wider text-2xl rotate">DAVE </p>
-
-
                 </div>
                 <p className="mt-1 text-neutral font-black tracking-wider text-center text-5xl">FOLEY</p>
                 <div className="mt-2 flex">
