@@ -6,12 +6,22 @@ import MainSection from './components/MainSetion'
 import MiddleSection from './components/MiddleSection'
 import BottomSection from './components/BottomSection'
 import Button from './components/UI/Button'
-import EmailForm from './components/EmailForm'
+import NavMenu from './components/NavMenu'
 import PreviousMap from 'postcss/lib/previous-map'
 
 function App() {
   const [count, setCount] = useState(0)
   const [language, setLanguage] = useState("English");
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const menuClickHandler = () => {
+    if (menuOpen) {
+      setMenuOpen(false)
+    }
+    else {
+      setMenuOpen(true);
+    }
+  }
 
   const clickHandler = () => {
     if (language === "English") {
@@ -24,7 +34,8 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
+      <NavBar menuClickHandler={menuClickHandler}/>
+      {menuOpen?<NavMenu/>:false}
       <MainSection language={language} />
       <MiddleSection language={language} clickHandler={clickHandler} />
       <BottomSection />
