@@ -12,7 +12,7 @@ function EmailForm(props) {
   const [toSend, setToSend] = useState({
     from_name: "Bob",
     to_name: "Dave",
-    message: "The user info is as follows: ",
+    message: "The following info was submitted by the user ",
     reply_to: "bob"
   });
 
