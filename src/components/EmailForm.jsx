@@ -1,23 +1,24 @@
 import { useState } from "react";
-import Button from "./UI/Button";
+import JoinButton from "./UI/JoinButton";
 import { send } from 'emailjs-com';
 
+
 function EmailForm(props) {
-    const [enteredname, setEnteredName] = useState("");
+    const [enteredName, setEnteredName] = useState("");
     const [enteredEmail, setEnteredEmail] = useState("");
     const [enteredChapter, setEnteredChapter] = useState("");
     const [enteredPhone, setEnteredPhone] = useState("");
+    const [isDisabled, setIsDisabled] = useState(true)
 
     const [toSend, setToSend] = useState({
         from_name: 'Bob',
         to_name: 'Dave',
         message: "The user info is as follows: ",
         reply_to: 'bob',
-      });
+    });
 
 
     const emailChangeHandler = (e) => {
-        setEnteredEmail(e.target.value);
         setToSend({ ...toSend, [e.target.name]: e.target.value });
     }
 
@@ -40,7 +41,7 @@ function EmailForm(props) {
     const submitHandler = (e) => {
         e.preventDefault();
         const voter = {
-            name: enteredname,
+            name: enteredName,
             email: enteredEmail,
             agency: enteredChapter
         }
@@ -56,7 +57,7 @@ function EmailForm(props) {
             .catch((err) => {
               console.log('FAILED...', err);
             });
-        
+
         props.getEmail(voter);
         setEnteredName("")
         setEnteredEmail("")
@@ -66,7 +67,7 @@ function EmailForm(props) {
 
     let joinCampaign = ""
 
-    if (props.language==="English"){
+    if (props.language === "English") {
         joinCampaign = "Join Our Campaign"
     }
     else {
@@ -81,18 +82,18 @@ function EmailForm(props) {
             <div className="grid grid-cols-2 gap-3 p-2">
                 <div className="input-holder col-span-2">
                     <input
-                        className="shadow-md shadow-slate-700 rounded-md box-border border border-slate-400 pl-3 min-w-full h-11 text-black"
+                        className="text-lg shadow-md shadow-slate-700 rounded-md box-border border border-slate-400 pl-3 min-w-full h-11 text-black"
                         name="name"
                         type="text"
                         onChange={nameChangeHandler}
-                        value={enteredname}
+                        value={enteredName}
                         placeholder={"Name*"}
                         required
                     />
                 </div>
                 <div className="input-holder col-span-2">
                     <input
-                        className="shadow-md shadow-slate-700 rounded-md box-border border border-slate-400 pl-3 min-w-full h-11 text-black"
+                        className="text-lg shadow-md shadow-slate-700 rounded-md box-border border border-slate-400 pl-3 min-w-full h-11 text-black"
                         name="email"
                         type="email"
                         onChange={emailChangeHandler}
@@ -103,7 +104,7 @@ function EmailForm(props) {
                 </div>
                 <div className="input-holder col-span-2">
                     <input
-                        className="shadow-md shadow-slate-700 rounded-md box-border border border-slate-400 pl-3 min-w-full h-11 text-black"
+                        className="text-lg shadow-md shadow-slate-700 rounded-md box-border border border-slate-400 pl-3 min-w-full h-11 text-black"
                         name="phone"
                         type="tel"
                         onChange={phoneChangeHandler}
@@ -114,7 +115,7 @@ function EmailForm(props) {
                 </div>
                 <div className="input-holder ">
                     <input
-                        className="shadow-md shadow-slate-700 rounded-md border border-slate-400 pl-2 w-full text-black h-11"
+                        className="text-lg shadow-md shadow-slate-700 rounded-md border border-slate-400 pl-2 w-full text-black h-11 bg-neutral-100"
                         name="chapter"
                         type="text"
                         onChange={chapterChangeHandler}
@@ -122,9 +123,9 @@ function EmailForm(props) {
                         placeholder={"Chapter"}
                     />
                 </div>
-                <div className="shadow-md shadow-slate-700 rounded-md flex bg-blue-600 justify-center text-white font-semibold">
-                    <button type='submit'>JOIN US</button>
-                </div>
+
+                <JoinButton isDisabled={isDisabled} />
+
             </div>
 
         </form>
