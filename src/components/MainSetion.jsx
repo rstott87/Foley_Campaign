@@ -36,4 +36,4 @@ function MainSection(props) {
 }
 
 export default MainSection;
-Í
+Í;

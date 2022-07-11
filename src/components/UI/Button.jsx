@@ -1,11 +1,11 @@
 function Button(props) {
-    return (
-        <div className="bg-indigo-300 flex justify-center py-10">
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
-                {props.text}
-            </button>
-        </div>
-    )
+  return (
+    <div className="flex justify-center bg-indigo-300 py-10">
+      <button class="rounded border border-blue-700 bg-blue-500 py-2 px-4 font-bold text-white hover:bg-blue-700">
+        {props.text}
+      </button>
+    </div>
+  );
 }
 
 export default Button;

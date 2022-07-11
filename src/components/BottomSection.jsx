@@ -2,10 +2,10 @@ const BottomSection = function () {
   return (
     <div className="bg-gradient-to-b from-neutral-100 to-violet-300">
       <div className="p-5 px-12">
-        <h1 className="leading-loose text-3xl font-bold text-center mb-2">
+        <h1 className="mb-2 text-center text-3xl font-bold leading-loose">
           About Dave
         </h1>
-        <p className="font-bold italic tracking-wide text-center text-lg">
+        <p className="text-center text-lg font-bold italic tracking-wide">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit
           amet ultricies felis. Quisque ac mollis est, et fringilla lectus.
           Aenean et iaculis sapien, eu ultricies odio. Donec scelerisque risus

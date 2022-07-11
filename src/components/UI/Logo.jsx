@@ -1,32 +1,34 @@
-
 const Logo = function (props) {
-    let name = "Dave";
+  let name = "Dave";
 
-    if (props.language === "English") {
-        name = "Dave"
-    }
-    else {
-        name = "Davíd"
-    }
+  if (props.language === "English") {
+    name = "Dave";
+  } else {
+    name = "Davíd";
+  }
 
+  return (
+    <div className="mx-auto mb-10 mt-8 w-48 p-2 font-bold text-neutral-100">
+      <div className="flex justify-evenly">
+        <p className="fon w-full -rotate-12 border border-blue-900 bg-white text-center text-xl font-extrabold tracking-wide text-slate-600  shadow-md shadow-slate-800">
+          ELECT
+        </p>
+        <p className=" rotate w-full text-center text-2xl font-black tracking-wider">
+          DAVE{" "}
+        </p>
+      </div>
+      <p className="text-neutral mt-1 text-center text-5xl font-black tracking-wider">
+        FOLEY
+      </p>
+      <div className="mt-2 flex">
+        <div className="h-1  w-full bg-white"></div>
+        <div className="mx-2 text-4xl leading-4">**</div>
+        <div className=" h-1 w-full bg-white"></div>
+      </div>
+      <p className="text-center text-lg leading-4">Local 509</p>
+      <p className="text-center text-2xl tracking-wider">President</p>
+    </div>
+  );
+};
 
-
-    return (   
-            <div className="mx-auto mb-10 mt-8 w-48 font-bold p-2 text-neutral-100">
-                <div className="flex justify-evenly">
-                    <p className="w-full bg-white border border-blue-900 text-xl font-extrabold fon text-center tracking-wide -rotate-12 text-slate-600  shadow-md shadow-slate-800">ELECT</p>
-                    <p className=" w-full text-center font-black tracking-wider text-2xl rotate">DAVE </p>
-                </div>
-                <p className="mt-1 text-neutral font-black tracking-wider text-center text-5xl">FOLEY</p>
-                <div className="mt-2 flex">
-                    <div className="w-full  bg-white h-1"></div>
-                    <div className="text-4xl mx-2 leading-4">**</div>
-                    <div className=" w-full bg-white h-1"></div>
-                </div>
-                <p className="text-center text-lg leading-4">Local 509</p>
-                <p className="text-center tracking-wider text-2xl" >President</p>
-            </div>
-    )
-}
-
-export default Logo; 
+export default Logo;
