@@ -1,7 +1,7 @@
 import SocialsItem from "./UI/SocialsItem";
 function SocialsContainer() {
   return (
-    <div className="flex w-5/12 justify-evenly py-2 ">
+    <div className="flex w-5/12 justify-evenly p-1">
       <div className=" ">
         <img
           className="h-10 object-scale-down"
