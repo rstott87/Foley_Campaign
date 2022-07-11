@@ -103,7 +103,6 @@ function EmailForm(props) {
             onChange={phoneChangeHandler}
             value={enteredPhone}
             placeholder={"Phone"}
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
           />
         </div>
         <div className="input-holder ">
