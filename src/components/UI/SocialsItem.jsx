@@ -1,6 +1,6 @@
 function SocialsItem() {
   return (
-    <div className="socials w-50 h-50">
+    <div className="p-1 socials w-50 h-50">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-10 w-10"
@@ -20,3 +20,4 @@ function SocialsItem() {
 }
 
 export default SocialsItem;
+

@@ -1,6 +1,6 @@
 function MenuButton(props) {
   return (
-    <div className="menu-container" onClick={props.menuClickHandler}>
+    <div className="menu-container " onClick={props.menuClickHandler}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="menu-button h-12 w-12"
