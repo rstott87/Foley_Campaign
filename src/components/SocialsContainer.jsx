@@ -5,23 +5,15 @@ function SocialsContainer() {
       <div className=" ">
         <img
           className=""
-          src="./src/images/icons8-instagram-50.png"
+          src="src/images/new_york_statue_of_liberty_liberty_island_238719.jpeg"
           alt=""
         />
       </div>
       <div className="h-min object-contain">
-        <img
-          className=""
-          src="./src/images/icons8-facebook-50.png"
-          alt=""
-        />
+        <img className="" src="./src/images/icons8-facebook-50.png" alt="" />
       </div>
       <div className="h-min object-contain">
-        <img
-          className=""
-          src="./src/images/icons8-twitter-50.png"
-          alt=""
-        />
+        <img className="" src="./src/images/icons8-twitter-50.png" alt="" />
       </div>
     </div>
   );

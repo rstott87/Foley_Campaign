@@ -28,6 +28,10 @@ function MainSection(props) {
     <div className="z-0 bg-gradient-to-br from-slate-800 to-blue-400 p-5 text-neutral-50 ">
       {/* <div className="bg-contain bg-center bg-no-repeat bg-hero-pattern text-bold text-black-100"></div> */}
       <Logo language={props.language} />
+      <img
+        src="src/images/new_york_statue_of_liberty_liberty_island_238719.jpeg"
+        alt=""
+      />
       <div className="grid gap-14">
         <EmailForm getEmail={userEmail} language={props.language} />
       </div>
