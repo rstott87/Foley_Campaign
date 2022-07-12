@@ -1,9 +1,9 @@
 import SocialsItem from "./UI/SocialsItem";
 function SocialsContainer() {
   return (
-    <div className="flex w-36 pt-2 px-2 justify-between ">
+    <div className="flex w-36 justify-between px-2 pt-2 ">
       {/* twitter log */}
-      <a href="google.com">
+      <a href="https://www.google.com/">
         <div className="h-min object-contain">
           <svg
             fill="#000000"
@@ -17,7 +17,7 @@ function SocialsContainer() {
         </div>
       </a>
       {/* facebook logo */}
-      <a href="google.com">
+      <a href="https://www.google.com/">
         <div className="h-min object-contain">
           <svg
             fill="#000000"
@@ -31,7 +31,7 @@ function SocialsContainer() {
         </div>
       </a>
       {/* instagram log */}
-      <a href="google.com">
+      <a href="https://www.google.com/">
         <div className="h-min object-contain">
           <svg
             fill="#000000"
