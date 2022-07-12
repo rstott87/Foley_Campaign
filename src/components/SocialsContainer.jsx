@@ -1,7 +1,7 @@
 import SocialsItem from "./UI/SocialsItem";
 function SocialsContainer() {
   return (
-    <div className="flex w-44 py-1 justify-evenly ">
+    <div className="flex w-44 justify-evenly ">
       <div className="h-min object-contain">
         <img className="" src="./src/images/icons8-facebook-50.png" alt="" />
       </div>
