@@ -1,7 +1,7 @@
 import SocialsItem from "./UI/SocialsItem";
 function SocialsContainer() {
   return (
-    <div className="flex w-40 pt-2 justify-evenly ">
+    <div className="flex w-36 pt-2 px-2 justify-between ">
       {/* twitter log */}
       <a href="google.com">
         <div className="h-min object-contain">
