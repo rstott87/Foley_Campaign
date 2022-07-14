@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="App">
       <NavBar menuClickHandler={menuClickHandler}/>
-      {menuOpen?<NavMenu/>:false}
+      {menuOpen?<NavMenu language={language}/>:false}
       <MainSection language={language} />
       <MiddleSection language={language} clickHandler={clickHandler} />
       <BottomSection />

@@ -67,13 +67,14 @@ function EmailForm(props) {
   }
 
   return (
-
     <div>
       <form onSubmit={submitHandler}>
-        <p className="text-center text-2xl font-bold">
-          {joinCampaign}
+        <p className="text-center text-2xl font-bold">{joinCampaign}</p>
+        <p className="text-center text-sm">
+          {props.language === "English"
+            ? "For info and upates"
+            : "Para información y actualizaciones"}
         </p>
-        <p className="text-center text-sm">For info and upates</p>
         <div className="grid grid-cols-2 gap-3 p-2">
           <div className="input-holder col-span-2">
             <input
@@ -82,7 +83,7 @@ function EmailForm(props) {
               type="text"
               onChange={nameChangeHandler}
               value={enteredName}
-              placeholder={"Name*"}
+              placeholder={props.language === "English" ? "Name*" : "Nombre*"}
               required
             />
           </div>
@@ -93,7 +94,11 @@ function EmailForm(props) {
               type="email"
               onChange={emailChangeHandler}
               value={enteredEmail}
-              placeholder={"Personal Email*"}
+              placeholder={
+                props.language === "English"
+                  ? "Personal Email*"
+                  : "Email Personal*"
+              }
               required
             />
           </div>
@@ -104,7 +109,9 @@ function EmailForm(props) {
               type="tel"
               onChange={phoneChangeHandler}
               value={enteredPhone}
-              placeholder={"Phone"}
+              placeholder={
+                props.language === "English" ? "Phone" : "Número de Teléfono"
+              }
             />
           </div>
           <div className="input-holder ">

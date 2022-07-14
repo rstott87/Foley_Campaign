@@ -15,7 +15,7 @@ const MiddleSection = function (props) {
         CONTRIBUTE
       </button>
       <button
-        className="ml-3 w-36 rounded-md bg-violet-600 p-3 font-bold text-white shadow-md shadow-slate-800"
+        className="ml-3 w-36 rounded-md bg-violet-600 font-bold text-white shadow-md shadow-slate-800"
         onClick={props.clickHandler}
       >
         {buttonLanguage}
