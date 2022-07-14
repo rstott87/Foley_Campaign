@@ -67,59 +67,61 @@ function EmailForm(props) {
   }
 
   return (
-    <form onSubmit={submitHandler}>
-      <p className="text-center  text-2xl font-bold  transition-all delay-1000 ease-in-out">
-        {joinCampaign}
-      </p>
-      <p className="text-center text-sm">For info and upates</p>
-      <div className="grid grid-cols-2 gap-3 p-2">
-        <div className="input-holder col-span-2">
-          <input
-            className="box-border h-11 min-w-full rounded-md border border-slate-400 pl-3 text-lg text-black shadow-md shadow-slate-700"
-            name="name"
-            type="text"
-            onChange={nameChangeHandler}
-            value={enteredName}
-            placeholder={"Name*"}
-            required
-          />
+
+    <div>
+      <form onSubmit={submitHandler}>
+        <p className="text-center text-2xl font-bold">
+          {joinCampaign}
+        </p>
+        <p className="text-center text-sm">For info and upates</p>
+        <div className="grid grid-cols-2 gap-3 p-2">
+          <div className="input-holder col-span-2">
+            <input
+              className="box-border h-11 min-w-full rounded-md border border-slate-400 pl-3 text-lg text-black shadow-md shadow-slate-700"
+              name="name"
+              type="text"
+              onChange={nameChangeHandler}
+              value={enteredName}
+              placeholder={"Name*"}
+              required
+            />
+          </div>
+          <div className="input-holder col-span-2">
+            <input
+              className="box-border h-11 min-w-full rounded-md border border-slate-400 pl-3 text-lg text-black shadow-md shadow-slate-700"
+              name="email"
+              type="email"
+              onChange={emailChangeHandler}
+              value={enteredEmail}
+              placeholder={"Personal Email*"}
+              required
+            />
+          </div>
+          <div className="input-holder col-span-2">
+            <input
+              className="box-border h-11 min-w-full rounded-md border border-slate-400 pl-3 text-lg text-black shadow-md shadow-slate-700"
+              name="phone"
+              type="tel"
+              onChange={phoneChangeHandler}
+              value={enteredPhone}
+              placeholder={"Phone"}
+            />
+          </div>
+          <div className="input-holder ">
+            <input
+              className="h-11 w-full rounded-md border border-slate-400 bg-neutral-100 pl-2 text-lg text-black shadow-md shadow-slate-700"
+              name="chapter"
+              type="text"
+              onChange={chapterChangeHandler}
+              value={enteredChapter}
+              placeholder={"509 Chapter"}
+            />
+          </div>
+          {/* post restoring last commit*/}
+          <JoinButton />
         </div>
-        <div className="input-holder col-span-2">
-          <input
-            className="box-border h-11 min-w-full rounded-md border border-slate-400 pl-3 text-lg text-black shadow-md shadow-slate-700"
-            name="email"
-            type="email"
-            onChange={emailChangeHandler}
-            value={enteredEmail}
-            placeholder={"Email*"}
-            required
-          />
-        </div>
-        <div className="input-holder col-span-2">
-          <input
-            className="box-border h-11 min-w-full rounded-md border border-slate-400 pl-3 text-lg text-black shadow-md shadow-slate-700"
-            name="phone"
-            type="tel"
-            onChange={phoneChangeHandler}
-            value={enteredPhone}
-            placeholder={"Phone"}
-          />
-        </div>
-        <div className="input-holder ">
-          <input
-            className="h-11 w-full rounded-md border border-slate-400 bg-neutral-100 pl-2 text-lg text-black shadow-md shadow-slate-700"
-            name="chapter"
-            type="text"
-            onChange={chapterChangeHandler}
-            value={enteredChapter}
-            placeholder={"509 Chapter"}
-          />
-        </div>
-        {/* post restoring last commit*/}
-        <JoinButton /> 
-        {console.log(toSend)}
-      </div>
-    </form>
+      </form>
+    </div>
   );
 }
 

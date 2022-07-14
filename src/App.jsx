@@ -25,13 +25,12 @@ function App() {
 
   const clickHandler = () => {
     if (language === "English") {
-      setLanguage("Spanish")
+      setTimeout(function(){setLanguage("Spanish")},400)
     }
     else {
-      setLanguage("English")
+      setTimeout(function(){setLanguage("English")},400);
     }
   }
-
   return (
     <div className="App">
       <NavBar menuClickHandler={menuClickHandler}/>
