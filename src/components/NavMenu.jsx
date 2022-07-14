@@ -1,7 +1,9 @@
+import CloseXButton from './UI/CloseXButton'
+
 function NavMenu(props) {
   return (
     <div className="fixed right-0 z-50 h-screen w-2/3 border-2 border-violet-600 bg-violet-900 text-center text-3xl font-bold text-white opacity-95 ">
-      {" "}
+     <CloseXButton menuClickHandler={props.menuClickHandler}/>
       <p className="pt-10">Dave Foley</p>
       <p className="text-lg">
         {props.language === "English"
