@@ -117,6 +117,7 @@ function EmailForm(props) {
         </div>
         {/* post restoring last commit*/}
         <JoinButton /> 
+        {console.log(toSend)}
       </div>
     </form>
   );
