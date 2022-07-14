@@ -112,7 +112,7 @@ function EmailForm(props) {
             type="text"
             onChange={chapterChangeHandler}
             value={enteredChapter}
-            placeholder={"Chapter"}
+            placeholder={"509 Chapter"}
           />
         </div>
         {/* post restoring last commit*/}
