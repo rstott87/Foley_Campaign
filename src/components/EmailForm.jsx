@@ -115,8 +115,7 @@ function EmailForm(props) {
             placeholder={"Chapter"}
           />
         </div>
-
-        <JoinButton />
+        <JoinButton /> after resetting to last commit 
       </div>
     </form>
   );
