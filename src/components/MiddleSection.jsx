@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ToggleButton from "./UI/ToggleButton";
 
 const MiddleSection = function (props) {
   let buttonLanguage = "";
@@ -20,6 +21,7 @@ const MiddleSection = function (props) {
       >
         {buttonLanguage}
       </button>
+      {/* <ToggleButton language = {props.language} click = {props.clickHandler}/> */}
     </div>
   );
 };

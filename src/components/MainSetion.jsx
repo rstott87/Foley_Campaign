@@ -1,6 +1,7 @@
 import EmailForm from "./EmailForm";
 import { useState } from "react";
 import Logo from "./UI/Logo";
+import ToggleButton from "./UI/ToggleButton";
 
 const placeholderUser = [
   {
