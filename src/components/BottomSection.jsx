@@ -1,6 +1,6 @@
 const BottomSection = function () {
   return (
-    <div className="bg-gradient-to-b from-neutral-100 to-violet-300">
+    <div id = "about" className="bg-gradient-to-b from-neutral-100 to-violet-300">
       <div className="p-5 px-12">
         <h1 className="mb-2 text-center text-3xl font-bold leading-loose">
           About Dave

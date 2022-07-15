@@ -31,7 +31,7 @@ function SocialsContainer() {
         </div>
       </a>
       {/* instagram log */}
-      <a href="https://www.google.com/">
+      <a href="https://instagram.com/foleyfor509?igshid=YmMyMTA2M2Y=">
         <div className="h-min object-contain">
           <svg
             fill="#000000"
