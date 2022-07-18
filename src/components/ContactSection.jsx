@@ -4,7 +4,7 @@ function ContactSection () {
         <div className="py-3 text-center text-xl font-bold">CONTACT DAVE</div>
         <div className="text-center pb-2 font-bold">DFoley@SEIU509.org</div>
         <div className="border-2 mx-8 border-slate-600"></div>
-        <div className="mx-auto mb-4 grid grid-cols-3 justify-between gap-2 p-3">
+        <div className="mx-auto mb-2 grid grid-cols-3 justify-between gap-2 p-3">
           {/* twitter log */}
           <a href="https://twitter.com/dave4509">
             <div className="">

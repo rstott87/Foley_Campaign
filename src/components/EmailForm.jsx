@@ -66,13 +66,20 @@ function EmailForm(props) {
     joinCampaign = "Únete a nuestra campaña";
   }
 
+  const textTransition = 
+            props.language === "English"
+              ? "animate-fade-in"
+              : "animate-fade-in2"
+  
   return (
     <div>
       <form onSubmit={submitHandler}>
-        <p className="text-center text-2xl font-bold">
+        <p
+          className={`${textTransition} text-center text-2xl font-bold`}
+        >
           {joinCampaign}
         </p>
-        <p className="text-center text-sm">
+        <p className={`${textTransition} text-center text-sm`}>
           {props.language === "English"
             ? "For info and upates"
             : "Para información y actualizaciones"}

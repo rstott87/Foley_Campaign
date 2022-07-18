@@ -13,7 +13,7 @@ const Logo = function (props) {
         <p className="w-full -rotate-12 border border-blue-900 bg-white text-center text-xl font-extrabold tracking-wide text-slate-600  shadow-md shadow-slate-800">
           ELECT
         </p>
-        <p className=" rotate w-full text-center text-2xl font-black tracking-wider">
+        <p className="w-full text-center text-2xl font-black tracking-wider">
           DAVE{" "}
         </p>
       </div>
