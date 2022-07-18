@@ -1,7 +1,9 @@
 import { useState } from "react";
 import ToggleButton from "./UI/ToggleButton";
+import MyDialog from "./MyDialog";
 
 const MiddleSection = function (props) {
+  const [openContributeModal, setOpenContributeModal] = useState(false) 
   let buttonLanguage = "";
 
   if (props.language === "English") {
@@ -9,11 +11,15 @@ const MiddleSection = function (props) {
   } else if (props.language === "Spanish") {
     buttonLanguage = "English";
   }
+  // opens dialogue box that contains options for pyment 
+  function contributeClick () {
+      openContributeModal?setOpenContributeModal(false):setOpenContributeModal(true);
+  }
 
   return (
     <div className="flex justify-evenly flex-nowrap w-full bg-gradient-to-r from-blue-200 to-blue-100 py-6">
       <div className="">
-        <button className="w-48 rounded-md bg-violet-600 p-3 font-bold text-white shadow-md shadow-slate-800">
+        <button onClick = {contributeClick} className="w-48 rounded-md bg-violet-600 p-3 font-bold text-white shadow-md shadow-slate-800">
           CONTRIBUTE
         </button>
         <button
@@ -23,7 +29,7 @@ const MiddleSection = function (props) {
           {buttonLanguage}
         </button>
       </div>
-      {/* <ToggleButton language = {props.language} click = {props.clickHandler}/> */}
+      {openContributeModal?<MyDialog contributeClick={contributeClick} openContributeModal={openContributeModal}/>:false}
     </div>
   );
 };

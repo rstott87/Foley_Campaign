@@ -3,7 +3,7 @@ function SocialsContainer() {
   return (
     <div className="flex w-36 justify-between px-2 pt-2 ">
       {/* twitter log */}
-      <a href="https://www.google.com/">
+      <a href="https://twitter.com/dave4509">
         <div className="h-min object-contain">
           <svg
             fill="#000000"

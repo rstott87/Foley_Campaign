@@ -9,8 +9,8 @@ import Button from './components/UI/Button'
 import NavMenu from './components/NavMenu'
 import PreviousMap from 'postcss/lib/previous-map'
 
+
 function App() {
-  const [count, setCount] = useState(0)
   const [language, setLanguage] = useState("English");
   const [menuOpen, setMenuOpen] = useState(false);
 
