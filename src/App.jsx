@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
-import NavBar from './components/NavBar'
-import MainSection from './components/MainSetion'
-import MiddleSection from './components/MiddleSection'
-import BottomSection from './components/BottomSection'
-import Button from './components/UI/Button'
-import NavMenu from './components/NavMenu'
-import PreviousMap from 'postcss/lib/previous-map'
-
+import { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import NavBar from "./components/NavBar";
+import MainSection from "./components/MainSetion";
+import MiddleSection from "./components/MiddleSection";
+import BottomSection from "./components/BottomSection";
+import NavMenu from "./components/NavMenu";
 
 function App() {
   const [language, setLanguage] = useState("English");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openContributeModal, setOpenContributeModal] = useState(false);
 
+  //opens side menu, but also closes the "contribute dialog box" if it's open
   const menuClickHandler = () => {
-    if (menuOpen) {
-      setMenuOpen(false)
-    }
-    else {
-      setMenuOpen(true);
-    }
-  }
+    menuOpen ? setMenuOpen(false) : setMenuOpen(true);
+    setOpenContributeModal(false);
+  };
 
   const clickHandler = () => {
     if (language === "English") {
-      setTimeout(function(){setLanguage("Spanish")},400)
+      setTimeout(function () {
+        setLanguage("Spanish");
+      }, 400);
+    } else {
+      setTimeout(function () {
+        setLanguage("English");
+      }, 400);
     }
-    else {
-      setTimeout(function(){setLanguage("English")},400);
-    }
+  };
+
+  // opens dialogue box that contains options for payment, and will close side menue if its open
+  function contributeClick() {
+    openContributeModal
+      ? setOpenContributeModal(false)
+      : setOpenContributeModal(true);
+    setMenuOpen(false);
   }
   return (
     <div className="App">
@@ -40,10 +46,15 @@ function App() {
         false
       )}
       <MainSection language={language} />
-      <MiddleSection language={language} clickHandler={clickHandler} />
+      <MiddleSection
+        language={language}
+        clickHandler={clickHandler}
+        contributeClick={contributeClick}
+        openContributeModal={openContributeModal}
+      />
       <BottomSection />
     </div>
   );
 }
 
-export default App
+export default App;

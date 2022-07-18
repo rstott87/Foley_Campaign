@@ -8,9 +8,9 @@ function MyDialog(props) {
       open={props.openContributeModal}
       onClose={() => props.contributeClick}
     >
-      <div className="fixed inset-0 flex items-center justify-center p-4">
-          <div className="absolute z-0 h-screen w-screen bg-slate-800 opacity-90 "></div>
-          <Dialog.Panel className="z-50 w-full max-w-sm rounded-xl border-4 border-red-700 bg-white p-4 text-2xl">
+      <div className="fixed inset-0 flex items-center justify-center p-8">
+          <div className="fixed h-screen w-screen bg-slate-800 opacity-90 "></div>
+          <Dialog.Panel className="fixed max-w-sm rounded-xl border-4 border-red-700 bg-white p-4 text-2xl mx-8">
             <Dialog.Title className="text-center">Choose a Way to Contribute</Dialog.Title>
             <div className="flex w-full justify-center">
               <button
