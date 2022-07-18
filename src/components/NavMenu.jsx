@@ -10,7 +10,6 @@ function NavMenu(props) {
           ? "For Local President"
           : "Para el presidente local"}
       </p>
-
         <ul className="pt-10 pl-8 text-left text-2xl leading-loose tracking-wider">
           <a href="#about">
             <li>{props.language === "English" ? "About" : "Sobre"}</li>
