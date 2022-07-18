@@ -6,6 +6,7 @@ import MainSection from "./components/MainSetion";
 import MiddleSection from "./components/MiddleSection";
 import BottomSection from "./components/BottomSection";
 import NavMenu from "./components/NavMenu";
+import ContactSection from "./components/ContactSection";
 
 function App() {
   const [language, setLanguage] = useState("English");
@@ -57,6 +58,7 @@ function App() {
         openContributeModal={openContributeModal}
       />
       <BottomSection />
+      <ContactSection />
     </div>
   );
 }
