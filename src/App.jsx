@@ -41,7 +41,11 @@ function App() {
     <div className="App">
       <NavBar menuClickHandler={menuClickHandler} />
       {menuOpen ? (
-        <NavMenu menuClickHandler={menuClickHandler} language={language} />
+        <NavMenu
+          menuClickHandler={menuClickHandler}
+          language={language}
+          contributeClick={contributeClick}
+        />
       ) : (
         false
       )}

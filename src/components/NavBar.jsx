@@ -3,7 +3,7 @@ import SocialsContainer from "./SocialsContainer";
 
 function NavBar(props) {
   return (
-    <div className="nav-bar sticky top-0 z-50 flex  justify-between bg-slate-200 opacity-95 shadow-lg px-1 py-1 shadow-slate-800">
+    <div className="nav-bar sticky top-0 z-50 flex justify-between bg-slate-200 px-3 py-2 opacity-95 shadow-lg shadow-slate-800">
       <SocialsContainer />
       <MenuButton menuClickHandler={props.menuClickHandler} />
     </div>
