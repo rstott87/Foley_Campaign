@@ -6,8 +6,14 @@ module.exports = {
         blur: "inset 20px 20px white"
       },
       animation: {
-        "spin-slow": "spin 8s linear infinite reverse"
+        "fade-in": "wiggle 400ms linear 1"
       },
+      keyframes: {
+        wiggle: {
+          "0%, ": { color: "white" },
+          "50%": { "color": "black" }
+        }
+      }
     }
   },
   plugins: []

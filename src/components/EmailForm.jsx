@@ -69,7 +69,9 @@ function EmailForm(props) {
   return (
     <div>
       <form onSubmit={submitHandler}>
-        <p className="text-center text-2xl font-bold">{joinCampaign}</p>
+        <p className="text-center text-2xl font-bold">
+          {joinCampaign}
+        </p>
         <p className="text-center text-sm">
           {props.language === "English"
             ? "For info and upates"

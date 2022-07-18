@@ -17,7 +17,7 @@ function SocialsContainer() {
         </div>
       </a>
       {/* facebook logo */}
-      <a href="https://www.google.com/">
+      <a href="https://m.facebook.com/FoleyFor509">
         <div className="h-min object-contain">
           <svg
             fill="#000000"
