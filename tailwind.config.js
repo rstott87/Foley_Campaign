@@ -6,15 +6,15 @@ module.exports = {
         blur: "inset 20px 20px white"
       },
       animation: {
-        "fade-in": "wiggle 400ms linear 1",
-        "fade-in2": "wiggle2 300ms linear 1"
+        "fade-in": "fade 700ms linear 1",
+        "fade-in2": "fade2 700ms linear 1"
       },
       keyframes: {
-        wiggle: {
-          "0% ": { color: "gray" },
-          "100%": { color: "white" }
+        fade: {
+          "0%,100% ": { color: "white" },
+          "50%": { color: "gray" }
         },
-        wiggle2: {
+       fade2: {
           "0% ": { color: "gray" },
           "100%": { color: "white" }
         }

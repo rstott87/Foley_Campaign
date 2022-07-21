@@ -72,22 +72,22 @@ function EmailForm(props) {
               : "animate-fade-in2"
   
   return (
-    <div>
+    <div className="m-auto w-96 lg:w-full lg:px-10 lg:pt-12">
       <form onSubmit={submitHandler}>
-        <p
-          className={`${textTransition} text-center text-2xl font-bold`}
-        >
-          {joinCampaign}
-        </p>
-        <p className={`${textTransition} text-center text-sm`}>
-          {props.language === "English"
-            ? "For info and upates"
-            : "Para información y actualizaciones"}
-        </p>
-        <div className="grid grid-cols-2 gap-3 p-2">
-          <div className="input-holder col-span-2">
+        <div className="lg:pb-8">
+          <p className={`${textTransition} text-center text-2xl font-bold lg:text-3xl`}>
+            {joinCampaign}
+          </p>
+          <p className={`${textTransition} text-center text-sm lg:text-lg`}>
+            {props.language === "English"
+              ? "For info and upates"
+              : "Para información y actualizaciones"}
+          </p>
+        </div>
+        <div className="mr-6 grid grid-cols-2 gap-3 p-2 lg:gap-">
+          <div className="input-holder col-span-2 lg:col-span-1">
             <input
-              className="box-border h-11 min-w-full rounded-md border border-slate-400 pl-3 text-lg text-black shadow-md shadow-slate-700"
+              className="box-border h-11 w-full rounded-md border border-slate-400 pl-3 text-lg text-black shadow-md shadow-slate-700"
               name="name"
               type="text"
               onChange={nameChangeHandler}
@@ -96,9 +96,9 @@ function EmailForm(props) {
               required
             />
           </div>
-          <div className="input-holder col-span-2">
+          <div className="input-holder col-span-2 lg:col-span-1">
             <input
-              className="box-border h-11 min-w-full rounded-md border border-slate-400 pl-3 text-lg text-black shadow-md shadow-slate-700"
+              className="box-border h-11 w-full rounded-md border border-slate-400 pl-3 text-lg text-black shadow-md shadow-slate-700"
               name="email"
               type="email"
               onChange={emailChangeHandler}
@@ -111,9 +111,9 @@ function EmailForm(props) {
               required
             />
           </div>
-          <div className="input-holder col-span-2">
+          <div className="input-holder col-span-2 lg:col-span-1">
             <input
-              className="box-border h-11 min-w-full rounded-md border border-slate-400 pl-3 text-lg text-black shadow-md shadow-slate-700"
+              className="box-border h-11 w-full rounded-md border border-slate-400 pl-3 text-lg text-black shadow-md shadow-slate-700"
               name="phone"
               type="tel"
               onChange={phoneChangeHandler}
@@ -134,7 +134,7 @@ function EmailForm(props) {
             />
           </div>
           {/* post restoring last commit*/}
-          <JoinButton />
+            <JoinButton />
         </div>
       </form>
     </div>
