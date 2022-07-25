@@ -12,11 +12,15 @@ function App() {
   const [language, setLanguage] = useState("English");
   const [menuOpen, setMenuOpen] = useState(false);
   const [openContributeModal, setOpenContributeModal] = useState(false);
+  const [fixedMenu, setFixedMenu] = useState(false);
 
   //opens side menu, but also closes the "contribute dialog box" if it's open
   const menuClickHandler = () => {
     menuOpen ? setMenuOpen(false) : setMenuOpen(true);
     setOpenContributeModal(false);
+    setTimeout(function () {
+      setFixedMenu(true);
+    }, 100);
   };
 
   const clickHandler = () => {
@@ -28,7 +32,7 @@ function App() {
       setTimeout(function () {
         setLanguage("English");
       }, 400);
-    }
+    };
   };
 
   // opens dialogue box that contains options for payment, and will close side menue if its open
@@ -43,6 +47,7 @@ function App() {
       <NavBar menuClickHandler={menuClickHandler} />
       {menuOpen ? (
         <NavMenu
+          fixedMenu={fixedMenu}
           menuClickHandler={menuClickHandler}
           language={language}
           contributeClick={contributeClick}
