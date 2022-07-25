@@ -8,7 +8,7 @@ module.exports = {
       animation: {
         "fade-in": "fade 700ms linear 1",
         "fade-in2": "fade2 700ms linear 1",
-        "slide-ltr": "slide 100ms linear 1"
+        "slide-ltr": "slide 200ms linear 1"
       },
       keyframes: {
         fade: {

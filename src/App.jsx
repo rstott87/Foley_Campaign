@@ -15,12 +15,15 @@ function App() {
   const [fixedMenu, setFixedMenu] = useState(false);
 
   //opens side menu, but also closes the "contribute dialog box" if it's open
+  //if click happens when menu is open then 'fixedMenu' gets set to false to reset slide feature
   const menuClickHandler = () => {
+    menuOpen
+      ? setFixedMenu(false)
+      : setTimeout(function () {
+          setFixedMenu(true);
+        }, 200);
     menuOpen ? setMenuOpen(false) : setMenuOpen(true);
     setOpenContributeModal(false);
-    setTimeout(function () {
-      setFixedMenu(true);
-    }, 100);
   };
 
   const clickHandler = () => {
@@ -32,7 +35,7 @@ function App() {
       setTimeout(function () {
         setLanguage("English");
       }, 400);
-    };
+    }
   };
 
   // opens dialogue box that contains options for payment, and will close side menue if its open
