@@ -1,6 +1,6 @@
 function ContactSection () {
     return (
-      <div>
+      <div id="contact">
         <div className="py-3 text-center text-xl font-bold">CONTACT DAVE</div>
         <div className="pb-2 text-center font-bold">FoleyFor509@gmail.com</div>
         <div className="mx-8 border-2 border-slate-600"></div>

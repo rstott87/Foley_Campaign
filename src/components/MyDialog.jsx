@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 
-function MyDialog(props) {
+function contributeDialog(props) {
 
   return (
     <Dialog
@@ -11,7 +11,7 @@ function MyDialog(props) {
       <div className="fixed inset-0 flex items-center justify-center p-8">
           <div className="fixed h-screen w-screen bg-slate-800 opacity-90 "></div>
           <Dialog.Panel className="fixed max-w-sm rounded-xl border-4 border-violet-700 bg-white p-4 text-2xl mx-8">
-            <Dialog.Title className="text-center">Choose a Way to Contribute</Dialog.Title>
+            <Dialog.Title className="text-center">Email Dave at FoleyFor509@gmail.com to contribute</Dialog.Title>
             <div className="flex w-full justify-center">
               <button
                 className="mt-10 text-lg w-24 rounded-md bg-violet-600 p-2 font-bold text-white shadow-md shadow-slate-800"
@@ -26,4 +26,4 @@ function MyDialog(props) {
   );
 }
 
-export default MyDialog;
+export default contributeDialog;
