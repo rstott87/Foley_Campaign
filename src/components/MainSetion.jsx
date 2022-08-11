@@ -2,6 +2,7 @@ import EmailForm from "./EmailForm";
 import { useState } from "react";
 import Logo from "./UI/Logo";
 import ToggleButton from "./UI/ToggleButton";
+import axios from "axios";
 
 const placeholderUser = [
   {
@@ -24,8 +25,9 @@ function MainSection(props) {
   const [submittedUser, setSubmittedUser] = useState(placeholderUser);
   //adds user info from form
   const userEmail = (user) => {
+    console.log(user)
     setSubmittedUser((prevUser) => {
-      console.log(user)
+
       return [user, ...prevUser];
     });
   };
@@ -42,4 +44,3 @@ function MainSection(props) {
 }
 
 export default MainSection;
-

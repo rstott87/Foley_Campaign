@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useState } from "react";
 import JoinButton from "./UI/JoinButton";
 import { send } from "emailjs-com";
@@ -51,14 +52,24 @@ function EmailForm(props) {
       phone_number: enteredPhone,
       local_chapter: enteredChapter
     };
-    send("service_mr00i87", "template_9n3a95t", toSend, "Lm-3BLvvZtqU2-L81")
-      .then((response) => {
-        console.log("SUCCESS!", response.status, response.text);
-      })
-      .catch((err) => {
-        console.log("FAILED...", err);
-      });
-
+    // send("service_mr00i87", "template_9n3a95t", toSend, "Lm-3BLvvZtqU2-L81")
+    //   .then((response) => {
+    //     console.log("SUCCESS!", response.status, response.text);
+    //   })
+    //   .catch((err) => {
+    //     console.log("FAILED...", err);
+    //   });
+    axios({
+      method: "post",
+      url: "https://gentle-refuge-51189.herokuapp.com/user/create",
+      data: {
+        first_name: voter.first_name,
+        last_name: voter.last_name,
+        personal_email: voter.personal_email,
+        phone_number: voter.phone_number,
+        local_chapter: voter.local_chapter
+      }
+    });
     props.getEmail(voter);
     setEnteredFirstName("");
     setEnteredLastName("");
