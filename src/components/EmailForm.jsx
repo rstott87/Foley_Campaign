@@ -10,7 +10,6 @@ function EmailForm(props) {
   const [enteredPhone, setEnteredPhone] = useState("");
   // const [isDisabled, setIsDisabled] = useState(true)
 
-
   const emailChangeHandler = (e) => {
     setEnteredEmail(e.target.value);
     setToSend({ ...toSend, [e.target.name]: e.target.value });
@@ -35,8 +34,8 @@ function EmailForm(props) {
     setEnteredPhone(e.target.value);
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
- // on form submit, voter object is created from the data that was entered as 
- //state in the form. the data is then sent to the database using axiox. lastly the voter object is passed to the function that creates a state of voters of as an array in MainSection
+  // on form submit, voter object is created from the data that was entered as
+  //state in the form. the data is then sent to the database using axiox. lastly the voter object is passed to the function that creates a state of voters of as an array in MainSection
   const submitHandler = (e) => {
     e.preventDefault();
     const voter = {
@@ -105,6 +104,8 @@ function EmailForm(props) {
               }
               required
             />
+          </div>
+          <div className="input-holder col-span-2 lg:col-span-1">
             <input
               className="box-border h-11 w-full rounded-md border border-slate-400 pl-3 text-lg text-black shadow-md shadow-slate-700"
               name="name"
