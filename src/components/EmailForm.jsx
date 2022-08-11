@@ -100,7 +100,7 @@ function EmailForm(props) {
               onChange={firstNameChangeHandler}
               value={enteredFirstName}
               placeholder={
-                props.language === "English" ? "First Name*" : "Nombre*"
+                props.language === "English" ? "First Name*" : "Primer nombre*"
               }
               required
             />
@@ -113,7 +113,7 @@ function EmailForm(props) {
               onChange={lastNameChangeHandler}
               value={enteredLastName}
               placeholder={
-                props.language === "English" ? "Last Name*" : "Nombre*"
+                props.language === "English" ? "Last Name*" : "Appelido*"
               }
               required
             />
@@ -156,7 +156,7 @@ function EmailForm(props) {
             />
           </div>
           {/* post restoring last commit*/}
-          <JoinButton />
+          <JoinButton language={props.language} />
         </div>
       </form>
     </div>

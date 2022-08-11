@@ -1,11 +1,11 @@
 const BottomSection = function () {
   return (
     <div>
-      <img
+      {/* <img
         className="z-0 absolute w-full"
         src="https://lh3.googleusercontent.com/0zfnFoLcYt2PNw-MnylNdTjJaZBMrpTIUX3g71aFQf_5FeBskmysZFEROxf3zePa1nlLaWZ-APNbpFaLt5xTlhGla6VozaWx_Jznw4ZD0dO1EERoZ-2R33ZJlkeoIokyIfuQJ0Fq_Q=w2400"
         alt=""
-      />
+      /> */}
       <div
         id="about"
         className="z-30 opacity-80 bg-gradient-to-b from-neutral-100 to-violet-300 "
