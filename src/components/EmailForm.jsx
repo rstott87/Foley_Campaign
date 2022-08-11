@@ -1,9 +1,11 @@
+import axios from "axios";
 import { useState } from "react";
 import JoinButton from "./UI/JoinButton";
 import { send } from "emailjs-com";
 
 function EmailForm(props) {
-  const [enteredName, setEnteredName] = useState("");
+  const [enteredFirstName, setEnteredFirstName] = useState("");
+  const [enteredLastName, setEnteredLastName] = useState("");
   const [enteredEmail, setEnteredEmail] = useState("");
   const [enteredChapter, setEnteredChapter] = useState("");
   const [enteredPhone, setEnteredPhone] = useState("");
@@ -21,8 +23,13 @@ function EmailForm(props) {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
-  const nameChangeHandler = (e) => {
-    setEnteredName(e.target.value);
+  const firstNameChangeHandler = (e) => {
+    setEnteredFirstName(e.target.value);
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
+  };
+
+  const lastNameChangeHandler = (e) => {
+    setEnteredLastName(e.target.value);
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
@@ -39,20 +46,33 @@ function EmailForm(props) {
   const submitHandler = (e) => {
     e.preventDefault();
     const voter = {
-      name: enteredName,
-      email: enteredEmail,
-      agency: enteredChapter
+      first_name: enteredFirstName,
+      last_name: enteredLastName,
+      personal_email: enteredEmail,
+      phone_number: enteredPhone,
+      local_chapter: enteredChapter
     };
-    send("service_mr00i87", "template_9n3a95t", toSend, "Lm-3BLvvZtqU2-L81")
-      .then((response) => {
-        console.log("SUCCESS!", response.status, response.text);
-      })
-      .catch((err) => {
-        console.log("FAILED...", err);
-      });
-
+    // send("service_mr00i87", "template_9n3a95t", toSend, "Lm-3BLvvZtqU2-L81")
+    //   .then((response) => {
+    //     console.log("SUCCESS!", response.status, response.text);
+    //   })
+    //   .catch((err) => {
+    //     console.log("FAILED...", err);
+    //   });
+    axios({
+      method: "post",
+      url: "https://gentle-refuge-51189.herokuapp.com/user/create",
+      data: {
+        first_name: voter.first_name,
+        last_name: voter.last_name,
+        personal_email: voter.personal_email,
+        phone_number: voter.phone_number,
+        local_chapter: voter.local_chapter
+      }
+    });
     props.getEmail(voter);
-    setEnteredName("");
+    setEnteredFirstName("");
+    setEnteredLastName("");
     setEnteredEmail("");
     setEnteredChapter("");
     setEnteredPhone("");
@@ -66,16 +86,16 @@ function EmailForm(props) {
     joinCampaign = "Únete a nuestra campaña";
   }
 
-  const textTransition = 
-            props.language === "English"
-              ? "animate-fade-in"
-              : "animate-fade-in2"
-  
+  const textTransition =
+    props.language === "English" ? "animate-fade-in" : "animate-fade-in2";
+
   return (
     <div className="m-auto w-96 lg:w-full lg:px-10 lg:pt-12">
       <form onSubmit={submitHandler}>
         <div className="lg:pb-8">
-          <p className={`${textTransition} text-center text-2xl font-bold lg:text-3xl`}>
+          <p
+            className={`${textTransition} text-center text-2xl font-bold lg:text-3xl`}
+          >
             {joinCampaign}
           </p>
           <p className={`${textTransition} text-center text-sm lg:text-lg`}>
@@ -84,15 +104,28 @@ function EmailForm(props) {
               : "Para información y actualizaciones"}
           </p>
         </div>
-        <div className="mr-6 grid grid-cols-2 gap-3 p-2 lg:gap-">
+        <div className="lg:gap- mr-6 grid grid-cols-2 gap-3 p-2">
           <div className="input-holder col-span-2 lg:col-span-1">
             <input
               className="box-border h-11 w-full rounded-md border border-slate-400 pl-3 text-lg text-black shadow-md shadow-slate-700"
               name="name"
               type="text"
-              onChange={nameChangeHandler}
-              value={enteredName}
-              placeholder={props.language === "English" ? "Name*" : "Nombre*"}
+              onChange={firstNameChangeHandler}
+              value={enteredFirstName}
+              placeholder={
+                props.language === "English" ? "First Name*" : "Nombre*"
+              }
+              required
+            />
+            <input
+              className="box-border h-11 w-full rounded-md border border-slate-400 pl-3 text-lg text-black shadow-md shadow-slate-700"
+              name="name"
+              type="text"
+              onChange={lastNameChangeHandler}
+              value={enteredLastName}
+              placeholder={
+                props.language === "English" ? "Last Name*" : "Nombre*"
+              }
               required
             />
           </div>
@@ -134,7 +167,7 @@ function EmailForm(props) {
             />
           </div>
           {/* post restoring last commit*/}
-            <JoinButton />
+          <JoinButton />
         </div>
       </form>
     </div>
