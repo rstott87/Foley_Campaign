@@ -23,11 +23,9 @@ const placeholderUser = [
 
 function MainSection(props) {
   const [submittedUser, setSubmittedUser] = useState(placeholderUser);
-  //adds user info from form
+  //sets state to be ann array of users. may not be necessary for this project.
   const userEmail = (user) => {
-    console.log(user)
     setSubmittedUser((prevUser) => {
-
       return [user, ...prevUser];
     });
   };

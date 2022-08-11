@@ -1,7 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
 import JoinButton from "./UI/JoinButton";
-import { send } from "emailjs-com";
 
 function EmailForm(props) {
   const [enteredFirstName, setEnteredFirstName] = useState("");
@@ -11,12 +10,6 @@ function EmailForm(props) {
   const [enteredPhone, setEnteredPhone] = useState("");
   // const [isDisabled, setIsDisabled] = useState(true)
 
-  const [toSend, setToSend] = useState({
-    from_name: "Bob",
-    to_name: "Dave",
-    message: "The following info was submitted by the user ",
-    reply_to: "bob"
-  });
 
   const emailChangeHandler = (e) => {
     setEnteredEmail(e.target.value);
@@ -42,7 +35,8 @@ function EmailForm(props) {
     setEnteredPhone(e.target.value);
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
-
+ // on form submit, voter object is created from the data that was entered as 
+ //state in the form. the data is then sent to the database using axiox. lastly the voter object is passed to the function that creates a state of voters of as an array in MainSection
   const submitHandler = (e) => {
     e.preventDefault();
     const voter = {
@@ -52,13 +46,7 @@ function EmailForm(props) {
       phone_number: enteredPhone,
       local_chapter: enteredChapter
     };
-    // send("service_mr00i87", "template_9n3a95t", toSend, "Lm-3BLvvZtqU2-L81")
-    //   .then((response) => {
-    //     console.log("SUCCESS!", response.status, response.text);
-    //   })
-    //   .catch((err) => {
-    //     console.log("FAILED...", err);
-    //   });
+
     axios({
       method: "post",
       url: "https://gentle-refuge-51189.herokuapp.com/user/create",
