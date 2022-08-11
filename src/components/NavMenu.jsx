@@ -17,14 +17,15 @@ function NavMenu(props) {
       </p>
       <ul className="pt-10 pl-8 text-left text-2xl leading-loose tracking-wider">
         <a href="#about">
-          <li onClick={props.menuClickHandler}>{props.language === "English" ? "About" : "Sobre"}</li>
+          <li onClick={props.menuClickHandler}>
+            {props.language === "English" ? "About" : "Sobre"}
+          </li>
         </a>
         <li>{props.language === "English" ? "Issues" : "Problemas"}</li>
         <li>{props.language === "English" ? "Contact" : "Contacto"}</li>
         <li onClick={props.contributeClick}>
           {props.language === "English" ? "Contribute" : "Contribuir"}
         </li>
-        <li>{props.language === "English" ? "Join" : "Unirse"}</li>
       </ul>
     </div>
   );
