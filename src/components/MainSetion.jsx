@@ -5,14 +5,18 @@ import ToggleButton from "./UI/ToggleButton";
 
 const placeholderUser = [
   {
-    name: "John Placeholder Smith",
-    email: "Jsmith@placeholder.com",
-    agency: "CSE"
+    first_name: "John",
+    last_name: "Placeholder",
+    personal_email: "johnP@placeholder.com",
+    phone_number: "781-555-3291",
+    local_chapter: "DOJ"
   },
   {
-    name: "Brian Placeholder Brown",
-    email: "Brownh@placeholder.com",
-    agency: "DDS"
+    first_name: "Anna",
+    last_name: "Brown",
+    personal_email: "brownh@placeholder.com",
+    phone_number: "781-555-3218",
+    local_chapter: "DCG"
   }
 ];
 
@@ -21,6 +25,7 @@ function MainSection(props) {
   //adds user info from form
   const userEmail = (user) => {
     setSubmittedUser((prevUser) => {
+      console.log(user)
       return [user, ...prevUser];
     });
   };
