@@ -48,7 +48,7 @@ function EmailForm(props) {
 
     axios({
       method: "post",
-      url: "https://gentle-refuge-51189.herokuapp.com/user/create",
+      url: "https://gentle-refuge-51189.herokuapp.com/private/user/create",
       data: {
         first_name: voter.first_name,
         last_name: voter.last_name,
