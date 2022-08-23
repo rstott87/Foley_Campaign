@@ -8,6 +8,7 @@ import BottomSection from "./components/BottomSection";
 import NavMenu from "./components/NavMenu";
 import ContactSection from "./components/ContactSection";
 
+
 function App() {
   const [language, setLanguage] = useState("English");
   const [menuOpen, setMenuOpen] = useState(false);
