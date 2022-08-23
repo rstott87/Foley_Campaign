@@ -12,22 +12,27 @@ function EmailForm(props) {
 
   const emailChangeHandler = (e) => {
     setEnteredEmail(e.target.value);
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
   const firstNameChangeHandler = (e) => {
     setEnteredFirstName(e.target.value);
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
   const lastNameChangeHandler = (e) => {
     setEnteredLastName(e.target.value);
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
   const chapterChangeHandler = (e) => {
     setEnteredChapter(e.target.value);
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
   const phoneChangeHandler = (e) => {
     setEnteredPhone(e.target.value);
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
   // on form submit, voter object is created from the data that was entered as
   //state in the form. the data is then sent to the database using axiox. lastly the voter object is passed to the function that creates a state of voters of as an array in MainSection
@@ -51,13 +56,7 @@ function EmailForm(props) {
         phone_number: voter.phone_number,
         local_chapter: voter.local_chapter
       }
-    })
-      .then(function (response) {
-        console.log(response.status);
-      })
-      .catch(function (error) {
-        console.log(error.status);
-      });
+    });
     props.getEmail(voter);
     setEnteredFirstName("");
     setEnteredLastName("");

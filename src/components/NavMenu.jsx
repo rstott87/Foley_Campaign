@@ -21,19 +21,15 @@ function NavMenu(props) {
             {props.language === "English" ? "About" : "Sobre"}
           </li>
         </a>
-        <a href="#contact">
-          <li onClick={props.menuClickHandler}>
-            {props.language === "English" ? "Issues" : "Problemas"}
-          </li>
-        </a>
+        <li>{props.language === "English" ? "Issues" : "Problemas"}</li>
         <a href="#contact">
           <li onClick={props.menuClickHandler}>
             {props.language === "English" ? "Contact" : "Contacto"}
           </li>
         </a>
-        <li className="cursor-pointer" onClick={props.contributeClick}>
-          {props.language === "English" ? "Contribute" : "Contribuir"}
-        </li>
+          <li onClick={props.contributeClick}>
+            {props.language === "English" ? "Contribute" : "Contribuir"}
+          </li>
       </ul>
     </div>
   );
