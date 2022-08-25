@@ -10,7 +10,7 @@ const BottomSection = function () {
         id="about"
         className="z-30 opacity-80 bg-gradient-to-b from-neutral-100 to-violet-300 "
       >
-        <div className="m-auto w-96 p-5 px-12 lg:w-auto">
+        <div className="m-auto w-96 py-5 px-8 lg:w-auto">
           <h1 className="mb-2 text-center text-3xl font-bold leading-loose">
             About Dave
           </h1>
