@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Dialog } from "@headlessui/react";
 
-function contributeDialog(props) {
+function ContributeDialog(props) {
 
   return (
     <Dialog
@@ -26,4 +26,4 @@ function contributeDialog(props) {
   );
 }
 
-export default contributeDialog;
+export default ContributeDialog;

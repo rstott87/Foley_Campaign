@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ToggleButton from "./UI/ToggleButton";
-import MyDialog from "./MyDialog";
+import ContributeDialog from "./ContributeDialog";
 
 const MiddleSection = function (props) {
   let buttonLanguage = "";
