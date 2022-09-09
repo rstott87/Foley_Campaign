@@ -5,13 +5,14 @@ import NavBar from "./components/NavBar";
 import MainSection from "./components/MainSetion";
 import MiddleSection from "./components/MiddleSection";
 import BottomSection from "./components/BottomSection";
-import NavMenu from "./components/NavMenu";
+import SideMenu from "./components/SideMenu";
 import ContactSection from "./components/ContactSection";
 
 function App() {
   const [language, setLanguage] = useState("English");
   const [menuOpen, setMenuOpen] = useState(false);
   const [openContributeModal, setOpenContributeModal] = useState(false);
+  const [openVoteModal, setOpenVoteModal] = useState(false);
   const [fixedMenu, setFixedMenu] = useState(false);
 
   //opens side menu, but also closes the "contribute dialog box" if it's open
@@ -45,15 +46,24 @@ function App() {
       : setOpenContributeModal(true);
     setMenuOpen(false);
   }
+
+    function voteClick() {
+      openVoteModal
+        ? setOpenVoteModal(false)
+        : setOpenVoteModal(true);
+      setMenuOpen(false);
+    }
+  //SideMenu should only render when menuOpen state is true
   return (
     <div className="App">
       <NavBar menuClickHandler={menuClickHandler} />
       {menuOpen ? (
-        <NavMenu
+        <SideMenu
           fixedMenu={fixedMenu}
           menuClickHandler={menuClickHandler}
           language={language}
           contributeClick={contributeClick}
+          voteClick={voteClick}
         />
       ) : (
         false

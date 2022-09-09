@@ -1,6 +1,6 @@
 import CloseXButton from "./UI/CloseXButton";
 
-function NavMenu(props) {
+function SideMenu(props) {
   //this class should only appear after slide in is complete. Necessary for positioning after slide in
   const right0 = props.fixedMenu ? "right-0" : "";
   return (
@@ -27,11 +27,16 @@ function NavMenu(props) {
             {props.language === "English" ? "Contact" : "Contacto"}
           </li>
         </a>
-          <li onClick={props.contributeClick}>
-            {props.language === "English" ? "Contribute" : "Contribuir"}
+        <li onClick={props.contributeClick}>
+          {props.language === "English" ? "Contribute" : "Contribuir"}
+        </li>
+        <a href="https://www.seiu509.org/2022-union-elections/">
+          <li onClick={props.voteClick}>
+            {props.language === "English" ? "How To Vote" : "Como Votar"}
           </li>
+        </a>
       </ul>
     </div>
   );
 }
-export default NavMenu;
+export default SideMenu;
