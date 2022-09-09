@@ -5,7 +5,7 @@ import NavBar from "./components/NavBar";
 import MainSection from "./components/MainSetion";
 import MiddleSection from "./components/MiddleSection";
 import BottomSection from "./components/BottomSection";
-import NavMenu from "./components/NavMenu";
+import SideMenu from "./components/SideMenu";
 import ContactSection from "./components/ContactSection";
 
 function App() {
@@ -49,7 +49,7 @@ function App() {
     <div className="App">
       <NavBar menuClickHandler={menuClickHandler} />
       {menuOpen ? (
-        <NavMenu
+        <SideMenu
           fixedMenu={fixedMenu}
           menuClickHandler={menuClickHandler}
           language={language}

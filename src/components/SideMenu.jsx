@@ -1,6 +1,6 @@
 import CloseXButton from "./UI/CloseXButton";
 
-function NavMenu(props) {
+function SideMenu(props) {
   //this class should only appear after slide in is complete. Necessary for positioning after slide in
   const right0 = props.fixedMenu ? "right-0" : "";
   return (
@@ -34,4 +34,4 @@ function NavMenu(props) {
     </div>
   );
 }
-export default NavMenu;
+export default SideMenu;
