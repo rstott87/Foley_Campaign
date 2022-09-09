@@ -27,9 +27,14 @@ function SideMenu(props) {
             {props.language === "English" ? "Contact" : "Contacto"}
           </li>
         </a>
-          <li onClick={props.contributeClick}>
-            {props.language === "English" ? "Contribute" : "Contribuir"}
+        <li onClick={props.contributeClick}>
+          {props.language === "English" ? "Contribute" : "Contribuir"}
+        </li>
+        <a href="https://www.seiu509.org/2022-union-elections/">
+          <li onClick={props.voteClick}>
+            {props.language === "English" ? "How To Vote" : "Como Votar"}
           </li>
+        </a>
       </ul>
     </div>
   );
