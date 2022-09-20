@@ -3,6 +3,8 @@ import CloseXButton from "./UI/CloseXButton";
 function SideMenu(props) {
   //this class should only appear after slide in is complete. Necessary for positioning after slide in
   const right0 = props.fixedMenu ? "right-0" : "";
+
+
   return (
     // right-0 property has been delayed after click to only be there after slide in is done.
     <div
@@ -31,7 +33,8 @@ function SideMenu(props) {
           {props.language === "English" ? "Contribute" : "Contribuir"}
         </li>
         <a>
-          <li onClick={props.contributeClick}>
+          <li onClick={props.voteClick}>
+
             {props.language === "English" ? "How To Vote" : "Como Votar"}
           </li>
         </a>
