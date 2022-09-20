@@ -15,7 +15,7 @@ const BottomSection = function () {
             About Dave
           </h1>
           <p className="text-center text-lg font-bold italic tracking-wide lg:tracking-tight">
-            Dave has been an employee with the Department of Revenue's Child Support Enforcement Division for over 10 years. Not long after his career began at DOR, he became actively involved with SEIU as a union steward. Dave's reputation as an attentive and accesible steward led to decisve victories in both of his campaigns for chapter president, a position which he currently holds. As chapter president, he's become known for being approachable and easily reachable. 
+            Dave has been an employee with the Department of Revenue's Child Support Enforcement Division for over 10 years. Not long after his career began at DOR, he became actively involved with SEIU as a union steward. Dave's reputation as an attentive and accesible steward led to decisve victories in both of his campaigns for chapter president, a position which he currently holds. As chapter president, he's become known as someone who's easy to reach and quick to get things done.
           </p>
         </div>
       </div>
