@@ -28,6 +28,7 @@ const MiddleSection = function (props) {
       </div>
       {props.openContributeModal ? (
         <ContributeDialog
+          dialogMessage = {props.dialogMessage}
           contributeClick={props.contributeClick}
           openContributeModal={props.openContributeModal}
         />
