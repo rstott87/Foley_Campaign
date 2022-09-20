@@ -47,12 +47,7 @@ function App() {
     setMenuOpen(false);
   }
 
-    function voteClick() {
-      openVoteModal
-        ? setOpenVoteModal(false)
-        : setOpenVoteModal(true);
-      setMenuOpen(false);
-    }
+
   //SideMenu should only render when menuOpen state is true
   return (
     <div className="App">
@@ -63,7 +58,6 @@ function App() {
           menuClickHandler={menuClickHandler}
           language={language}
           contributeClick={contributeClick}
-          voteClick={voteClick}
         />
       ) : (
         false
