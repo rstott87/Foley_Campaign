@@ -14,6 +14,7 @@ function App() {
   const [openContributeModal, setOpenContributeModal] = useState(false);
   const [openVoteModal, setOpenVoteModal] = useState(false);
   const [fixedMenu, setFixedMenu] = useState(false);
+  const [dialogMessage, setDialogMessage] = useState("hello");
 
   //opens side menu, but also closes the "contribute dialog box" if it's open
   //if click happens when menu is open then 'fixedMenu' gets set to false to reset slide feature
@@ -39,20 +40,26 @@ function App() {
     }
   };
 
-  // opens dialogue box that contains options for payment, and will close side menue if its open
-  function contributeClick() {
+  //this function will open dialog if its closed, and close if its open.
+  // setMenuOpen(false) ensures that side menu is closed if dilaog opens
+  function openCloseDialog() {
     openContributeModal
       ? setOpenContributeModal(false)
       : setOpenContributeModal(true);
     setMenuOpen(false);
   }
 
-    function voteClick() {
-      openVoteModal
-        ? setOpenVoteModal(false)
-        : setOpenVoteModal(true);
-      setMenuOpen(false);
-    }
+  // opens dialog box that contains options for payment, and will close side menue if its open
+  function contributeClick() {
+    openCloseDialog();
+    setDialogMessage("contribute");
+  }
+
+  function voteClick() {
+    openCloseDialog();
+    setDialogMessage("Visit the Official SEIU website for more info");
+  }
+
   //SideMenu should only render when menuOpen state is true
   return (
     <div className="App">
@@ -70,6 +77,7 @@ function App() {
       )}
       <MainSection language={language} />
       <MiddleSection
+        dialogMessage={dialogMessage}
         language={language}
         clickHandler={clickHandler}
         contributeClick={contributeClick}
