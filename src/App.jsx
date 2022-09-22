@@ -49,7 +49,7 @@ function App() {
     setMenuOpen(false);
   }
 
-  // opens dialogue box that contains options for payment, and will close side menue if its open
+  // opens dialog box that contains options for payment, and will close side menue if its open
   function contributeClick() {
     openCloseDialog();
     setDialogMessage("contribute");
