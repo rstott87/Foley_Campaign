@@ -1,20 +1,29 @@
+//animates hamburger bar to turn itno x if menuOpen state is true
 function MenuButton(props) {
   return (
-    <div className="menu-container" onClick={props.menuClickHandler}>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="menu-button h-12 w-12"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M4 6h16M4 12h16M4 18h16"
-        />
-      </svg>
+    <div className="menu-container my-1 w-12" onClick={props.menuClickHandler}>
+      <div
+        className={`h-2 w-full rounded-md bg-slate-700  ${
+          props.menuOpen
+            ? "origin-top-left rotate-45 duration-500"
+            : "rotate-0 duration-500"
+        }`}
+      ></div>
+      <div
+        className={`my-2 h-2 w-full rounded-md bg-slate-700
+      ${
+        props.menuOpen
+          ? "bg-transparent duration-300 "
+          : "bg-slate-700 duration-300"
+      } `}
+      ></div>
+      <div
+        className={`h-2 w-full rounded-md bg-slate-700  ${
+          props.menuOpen
+            ? "origin-bottom-left -rotate-45 duration-500"
+            : "rotate-0 duration-500"
+        }`}
+      ></div>
     </div>
   );
 }
