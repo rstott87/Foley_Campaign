@@ -63,7 +63,7 @@ function App() {
   //SideMenu should only render when menuOpen state is true
   return (
     <div className="App">
-      <NavBar menuClickHandler={menuClickHandler} />
+      <NavBar menuOpen={menuOpen} menuClickHandler={menuClickHandler} />
       {menuOpen ? (
         <SideMenu
           fixedMenu={fixedMenu}
