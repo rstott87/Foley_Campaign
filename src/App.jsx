@@ -23,7 +23,7 @@ function App() {
       ? setFixedMenu(false)
       : setTimeout(function () {
           setFixedMenu(true);
-        }, 200);
+        }, 400);
     menuOpen ? setMenuOpen(false) : setMenuOpen(true);
     setOpenContributeModal(false);
   };
