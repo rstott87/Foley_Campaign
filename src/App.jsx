@@ -15,14 +15,7 @@ function App() {
   const [openVoteModal, setOpenVoteModal] = useState(false);
   const [dialogMessage, setDialogMessage] = useState("hello");
 
-  //opens side menu, but also closes the "contribute dialog box" if it's open
-  //if click happens when menu is open then 'fixedMenu' gets set to false to reset slide feature
   const menuClickHandler = () => {
-    // menuOpen
-    //   ? setFixedMenu(false)
-    //   : setTimeout(function () {
-    //       setFixedMenu(true);
-    //     }, 0);
     menuOpen ? setMenuOpen(false) : setMenuOpen(true);
     setOpenContributeModal(false);
   };
@@ -53,7 +46,7 @@ function App() {
   // opens dialog box that contains options for payment, and will close side menue if its open
   function contributeClick() {
     openCloseDialog();
-    setDialogMessage("contribute");
+    setDialogMessage("Donate now through PayPal");
   }
 
   function voteClick() {
