@@ -46,12 +46,12 @@ function App() {
   // opens dialog box that contains options for payment, and will close side menue if its open
   function contributeClick() {
     openCloseDialog();
-    setDialogMessage("Donate now through PayPal");
+    setDialogMessage("Email us at FoleyFor509@gmail.com to inquire about the donation process");
   }
 
   function voteClick() {
     openCloseDialog();
-    setDialogMessage("Visit the Official SEIU website for more info");
+    setDialogMessage("Official ballots will be mailed to all 509 members starting in early November");
   }
 
   //SideMenu should only render when menuOpen state is true
