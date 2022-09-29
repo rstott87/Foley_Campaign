@@ -23,7 +23,7 @@ function App() {
       ? setFixedMenu(false)
       : setTimeout(function () {
           setFixedMenu(true);
-        }, 400);
+        }, 10);
     menuOpen ? setMenuOpen(false) : setMenuOpen(true);
     setOpenContributeModal(false);
   };
@@ -64,17 +64,13 @@ function App() {
   return (
     <div className="App">
       <NavBar menuOpen={menuOpen} menuClickHandler={menuClickHandler} />
-      {menuOpen ? (
-        <SideMenu
-          fixedMenu={fixedMenu}
-          menuClickHandler={menuClickHandler}
-          language={language}
-          contributeClick={contributeClick}
-          voteClick={voteClick}
-        />
-      ) : (
-        false
-      )}
+      <SideMenu
+        fixedMenu={fixedMenu}
+        menuClickHandler={menuClickHandler}
+        language={language}
+        contributeClick={contributeClick}
+        voteClick={voteClick}
+      />
       <MainSection language={language} />
       <MiddleSection
         dialogMessage={dialogMessage}
@@ -90,3 +86,18 @@ function App() {
 }
 
 export default App;
+
+//  <NavBar menuOpen={menuOpen} menuClickHandler={menuClickHandler} />;
+//  {
+//    menuOpen ? (
+//      <SideMenu
+//        fixedMenu={fixedMenu}
+//        menuClickHandler={menuClickHandler}
+//        language={language}
+//        contributeClick={contributeClick}
+//        voteClick={voteClick}
+//      />
+//    ) : (
+//      false
+//    );
+//  }
