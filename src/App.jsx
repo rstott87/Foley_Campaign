@@ -13,17 +13,9 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openContributeModal, setOpenContributeModal] = useState(false);
   const [openVoteModal, setOpenVoteModal] = useState(false);
-  const [fixedMenu, setFixedMenu] = useState(false);
   const [dialogMessage, setDialogMessage] = useState("hello");
 
-  //opens side menu, but also closes the "contribute dialog box" if it's open
-  //if click happens when menu is open then 'fixedMenu' gets set to false to reset slide feature
   const menuClickHandler = () => {
-    menuOpen
-      ? setFixedMenu(false)
-      : setTimeout(function () {
-          setFixedMenu(true);
-        }, 10);
     menuOpen ? setMenuOpen(false) : setMenuOpen(true);
     setOpenContributeModal(false);
   };
@@ -43,16 +35,18 @@ function App() {
   //this function will open dialog if its closed, and close if its open.
   // setMenuOpen(false) ensures that side menu is closed if dilaog opens
   function openCloseDialog() {
+    setMenuOpen(false);
     openContributeModal
       ? setOpenContributeModal(false)
-      : setOpenContributeModal(true);
-    setMenuOpen(false);
+      : setTimeout(function () {
+          setOpenContributeModal(true);
+        }, 0);
   }
 
   // opens dialog box that contains options for payment, and will close side menue if its open
   function contributeClick() {
     openCloseDialog();
-    setDialogMessage("contribute");
+    setDialogMessage("Donate now through PayPal");
   }
 
   function voteClick() {
@@ -65,7 +59,7 @@ function App() {
     <div className="App">
       <NavBar menuOpen={menuOpen} menuClickHandler={menuClickHandler} />
       <SideMenu
-        fixedMenu={fixedMenu}
+        menuOpen={menuOpen}
         menuClickHandler={menuClickHandler}
         language={language}
         contributeClick={contributeClick}

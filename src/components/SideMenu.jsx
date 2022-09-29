@@ -2,7 +2,7 @@ import CloseXButton from "./UI/CloseXButton";
 
 function SideMenu(props) {
   //this class should only appear after slide in is complete. Necessary for positioning after slide in
-  const width0 = props.fixedMenu ? "left-1/3" : "left-full";
+  const width0 = props.menuOpen ? "left-1/3" : "left-full";
 
 
   return (
