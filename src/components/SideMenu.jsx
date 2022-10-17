@@ -8,7 +8,7 @@ function SideMenu(props) {
   return (
     // right-0 property has been delayed after click to only be there after slide in is done.
     <div
-      className={`fixed z-50 ${width0} duration-500 h-screen w-2/3 border-2 border-violet-600 bg-violet-900 text-center text-3xl font-bold text-white opacity-95`}
+      className={`fixed z-50 ${width0} h-screen w-2/3 border-2 border-violet-600 bg-violet-900 text-center text-3xl font-bold text-white opacity-95 duration-500`}
     >
       <CloseXButton menuClickHandler={props.menuClickHandler} />
       <p className="pt-10">Dave Foley</p>
@@ -18,12 +18,11 @@ function SideMenu(props) {
           : "Para el presidente local"}
       </p>
       <ul className="pt-10 pl-8 text-left text-2xl leading-loose tracking-wider">
-        <a href="#about">
+        <a href="#our_vision">
           <li onClick={props.menuClickHandler}>
-            {props.language === "English" ? "About" : "Sobre"}
+            {props.language === "English" ? "Our Vision" : "Nuestra Visión"}
           </li>
         </a>
-        <li>{props.language === "English" ? "Issues" : "Problemas"}</li>
         <a href="#contact">
           <li onClick={props.menuClickHandler}>
             {props.language === "English" ? "Contact" : "Contacto"}

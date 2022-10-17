@@ -7,12 +7,12 @@ const BottomSection = function () {
         alt=""
       /> */}
       <div
-        id="about"
+        id="our_vision"
         className="z-30 bg-gradient-to-b from-neutral-100 to-violet-300 opacity-80 "
       >
         <div className="m-auto w-96 py-5 px-8 lg:w-auto">
           <h1 className="mb-2 text-center text-3xl font-bold leading-loose">
-            About Dave
+            Our Vision
           </h1>
           <div className="text-lg font-bold italic tracking-wide lg:tracking-tight">
             <p className="indent-5">
