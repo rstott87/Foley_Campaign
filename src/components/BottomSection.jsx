@@ -10,11 +10,11 @@ const BottomSection = function () {
         id="our_vision"
         className="z-30 bg-gradient-to-b from-neutral-100 to-violet-300 opacity-80 "
       >
-        <div className="m-auto w-96 py-5 px-8 lg:w-auto">
+        <div className="w-auto py-5 px-10 md:px-8 lg:px-8">
           <h1 className="mb-2 text-center text-3xl font-bold leading-loose">
             Our Vision
           </h1>
-          <div className="text-lg font-bold italic tracking-wide lg:tracking-tight">
+          <div className="grid gap-2 text-lg font-bold italic tracking-wide md:grid-cols-2 md:gap-6 lg:gap-6 lg:tracking-tight ">
             <p className="indent-5">
               When we fight, we win! But to win, we actually need to fight. That
               means organizing actions at our job sites, which requires a
