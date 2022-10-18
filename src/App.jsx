@@ -81,17 +81,4 @@ function App() {
 
 export default App;
 
-//  <NavBar menuOpen={menuOpen} menuClickHandler={menuClickHandler} />;
-//  {
-//    menuOpen ? (
-//      <SideMenu
-//        fixedMenu={fixedMenu}
-//        menuClickHandler={menuClickHandler}
-//        language={language}
-//        contributeClick={contributeClick}
-//        voteClick={voteClick}
-//      />
-//    ) : (
-//      false
-//    );
-//  }
+
