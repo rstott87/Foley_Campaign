@@ -8,7 +8,7 @@ function SideMenu(props) {
   return (
     // right-0 property has been delayed after click to only be there after slide in is done.
     <div
-      className={`fixed z-50 ${width0} h-screen w-2/3 border-2 border-violet-600 bg-violet-900 text-center text-3xl font-bold text-white opacity-95 duration-500`}
+      className={`fixed z-50 ${width0} h-screen w-2/3 border-l-2 border-violet-500 bg-violet-900 text-center text-3xl font-bold text-white opacity-95 duration-500`}
     >
       <CloseXButton menuClickHandler={props.menuClickHandler} />
       <p className="pt-10">Dave Foley</p>
