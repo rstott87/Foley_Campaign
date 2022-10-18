@@ -34,8 +34,8 @@ function MainSection(props) {
   };
 
   return (
-    <div className="relative bg-gradient-to-br from-slate-800 to-blue-400  text-neutral-50">
-      <div className="absolute z-0 h-full w-auto opacity-30">
+    <div className="relative bg-gradient-to-br from-slate-800 to-violet-400  text-neutral-50">
+      <div className="absolute z-0 h-full w-auto opacity-20">
         <img src={dave_podium} alt="" className="h-full object-cover" />
       </div>
       <div className="relative z-20">
