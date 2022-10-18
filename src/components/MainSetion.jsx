@@ -2,7 +2,7 @@ import EmailForm from "./EmailForm";
 import { useState } from "react";
 import Logo from "./UI/Logo";
 import ToggleButton from "./UI/ToggleButton";
-import dave_podium from "../images/Dave_Podium_Resized_2.jpg";
+import dave_podium from '../images/Dave_Podium_Resized_2.jpg'
 import axios from "axios";
 
 

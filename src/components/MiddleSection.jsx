@@ -11,7 +11,7 @@ const MiddleSection = function (props) {
   }
 
   return (
-    <div className="flex w-full flex-nowrap justify-evenly bg-gradient-to-r from-blue-200 to-blue-100 py-6">
+    <div className="z-50 flex w-full flex-nowrap justify-evenly bg-gradient-to-r from-blue-200 to-blue-100 py-6">
       <div className="">
         <button
           onClick={props.contributeClick}

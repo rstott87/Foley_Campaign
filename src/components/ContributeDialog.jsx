@@ -6,7 +6,7 @@ function ContributeDialog(props) {
       open={props.openContributeModal}
       onClose={() => props.contributeClick}
     >
-      <div className="fixed inset-0 flex items-center justify-center p-8">
+      <div className="fixed inset-0 z-40 flex items-center justify-center p-8">
         <div className="fixed h-screen w-screen bg-slate-800 opacity-90 "></div>
         <Dialog.Panel className="fixed mx-8 max-w-sm rounded-xl border-4 border-violet-700 bg-white p-4 text-2xl">
           <Dialog.Title className="text-center">
