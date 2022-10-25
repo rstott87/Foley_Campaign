@@ -77,7 +77,7 @@ function EmailForm(props) {
     props.language === "English" ? "animate-fade-in" : "animate-fade-in2";
 
   return (
-    <div id="join" className="m-auto w-96 pb-8 lg:w-full lg:px-10 lg:pt-12">
+    <div id="join" className="m-auto w-96 pb-8 lg:w-2/3 xl:w-full lg:px-10 lg:pt-12">
       <form onSubmit={submitHandler}>
         <div className="lg:pb-8">
           <p

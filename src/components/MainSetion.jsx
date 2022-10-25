@@ -39,7 +39,7 @@ function MainSection(props) {
         <div className="absolute z-0 h-full opacity-20">
           <img src={dave_podium} alt="" className="h-full object-cover" />
         </div>
-        <div className="relative z-20 ">
+        <div className="relative z-20">
           {/* <div className="bg-contain bg-center bg-no-repeat bg-hero-pattern text-bold text-black-100"></div> */}
           <Logo language={props.language} />
           <div className="grid gap-14">
