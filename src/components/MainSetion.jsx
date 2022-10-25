@@ -34,15 +34,17 @@ function MainSection(props) {
   };
 
   return (
-    <div className="relative bg-gradient-to-br from-slate-800 to-violet-400  text-neutral-50">
-      <div className="absolute z-0 h-full w-auto opacity-20">
-        <img src={dave_podium} alt="" className="h-full object-cover" />
-      </div>
-      <div className="relative z-20">
-        {/* <div className="bg-contain bg-center bg-no-repeat bg-hero-pattern text-bold text-black-100"></div> */}
-        <Logo language={props.language} />
-        <div className="grid gap-14">
-          <EmailForm getEmail={userEmail} language={props.language} />
+    <div className="">
+      <div className="xl:flex relative justify-center bg-gradient-to-br from-slate-800  to-violet-400 text-neutral-50 ">
+        <div className="absolute z-0 h-full opacity-20">
+          <img src={dave_podium} alt="" className="h-full object-cover" />
+        </div>
+        <div className="relative z-20 ">
+          {/* <div className="bg-contain bg-center bg-no-repeat bg-hero-pattern text-bold text-black-100"></div> */}
+          <Logo language={props.language} />
+          <div className="grid gap-14">
+            <EmailForm getEmail={userEmail} language={props.language} />
+          </div>
         </div>
       </div>
     </div>

@@ -56,7 +56,7 @@ function App() {
 
   //SideMenu should only render when menuOpen state is true
   return (
-    <div className="App">
+    <div className="App ">
       <NavBar menuOpen={menuOpen} menuClickHandler={menuClickHandler} />
       <SideMenu
         menuOpen={menuOpen}
@@ -65,7 +65,8 @@ function App() {
         contributeClick={contributeClick}
         voteClick={voteClick}
       />
-      <MainSection language={language} />
+        <MainSection language={language} />
+
       <MiddleSection
         dialogMessage={dialogMessage}
         language={language}
